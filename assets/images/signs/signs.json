@@ -1,0 +1,746 @@
+{
+  "categories_details": {
+    "mandatory_prohibitory": {
+      "english_name": "Mandatory (Prohibitory)",
+      "bengali_name": "বাধ্যতামূলক (না-বাচক)",
+      "description": "Circular signs with red borders indicating actions that are prohibited.",
+      "bengali_description": "লাল বৃত্তের ভেতরে থাকা এই চিহ্নগুলো কোনো কাজ না করার নির্দেশ দেয়।",
+      "shape": "Circle",
+      "color": "Red border"
+    },
+    "mandatory_compulsory": {
+      "english_name": "Mandatory (Compulsory)",
+      "bengali_name": "বাধ্যতামূলক (হ্যাঁ-বাচক)",
+      "description": "Blue circular signs indicating actions that must be followed.",
+      "bengali_description": "নীল বৃত্তের ভেতরে থাকা এই চিহ্নগুলো অবশ্যই পালনীয় নির্দেশ দেয়।",
+      "shape": "Circle",
+      "color": "Blue solid"
+    },
+    "warning": {
+      "english_name": "Warning",
+      "bengali_name": "সতর্কতামূলক",
+      "description": "Triangular signs providing cautionary alerts about potential hazards.",
+      "bengali_description": "ত্রিভুজ আকৃতির এই চিহ্নগুলো সামনের সম্ভাব্য বিপদ সম্পর্কে আগাম সতর্কতা প্রদান করে।",
+      "shape": "Triangle",
+      "color": "Red border"
+    },
+    "informative": {
+      "english_name": "Informative",
+      "bengali_name": "তথ্যমূলক",
+      "description": "Rectangular or square signs providing useful information for road users.",
+      "bengali_description": "চতুর্ভুজ বা আয়তাকার এই চিহ্নগুলো সড়ক ব্যবহারকারীদের বিভিন্ন প্রয়োজনীয় তথ্য প্রদান করে।",
+      "shape": "Rectangle/Square",
+      "color": "Blue or Green"
+    }
+  },
+  "signs": [
+    {
+      "english_name": "Stop and Give Way",
+      "bengali_name": "থামুন এবং আগে যেতে দিন",
+      "file_name": "sign_001.webp",
+      "category": "mandatory_prohibitory"
+    },
+    {
+      "english_name": "Give Way",
+      "bengali_name": "আগে যেতে দিন",
+      "file_name": "sign_002.webp",
+      "category": "mandatory_prohibitory"
+    },
+    {
+      "english_name": "No Entry",
+      "bengali_name": "যানবাহন প্রবেশ নিষেধ",
+      "file_name": "sign_003.webp",
+      "category": "mandatory_prohibitory"
+    },
+    {
+      "english_name": "Motor Vehicles Prohibited",
+      "bengali_name": "মোটরযান চলাচল নিষেধ",
+      "file_name": "sign_004.webp",
+      "category": "mandatory_prohibitory"
+    },
+    {
+      "english_name": "Trucks Prohibited",
+      "bengali_name": "ট্রাক চলাচল নিষেধ",
+      "file_name": "sign_005.webp",
+      "category": "mandatory_prohibitory"
+    },
+    {
+      "english_name": "Hand Carts Prohibited",
+      "bengali_name": "ঠেলাগাড়ি চলাচল নিষেধ",
+      "file_name": "sign_006.webp",
+      "category": "mandatory_prohibitory"
+    },
+    {
+      "english_name": "Animal-Drawn Vehicles Prohibited",
+      "bengali_name": "পশুবাহিত যানবাহন চলাচল নিষেধ",
+      "file_name": "sign_007.webp",
+      "category": "mandatory_prohibitory"
+    },
+    {
+      "english_name": "Pedestrians Prohibited",
+      "bengali_name": "পথচারী চলাচল নিষেধ",
+      "file_name": "sign_008.webp",
+      "category": "mandatory_prohibitory"
+    },
+    {
+      "english_name": "Rickshaws Prohibited",
+      "bengali_name": "রিক্সা চলাচল নিষেধ",
+      "file_name": "sign_009.webp",
+      "category": "mandatory_prohibitory"
+    },
+    {
+      "english_name": "Bicycles Prohibited",
+      "bengali_name": "সাইকেল চলাচল নিষেধ",
+      "file_name": "sign_010.webp",
+      "category": "mandatory_prohibitory"
+    },
+    {
+      "english_name": "Slow-Moving Vehicles Prohibited",
+      "bengali_name": "ধীরগতির যানবাহন চলাচল নিষেধ",
+      "file_name": "sign_011.webp",
+      "category": "mandatory_prohibitory"
+    },
+    {
+      "english_name": "Vehicles Carrying Explosives Prohibited",
+      "bengali_name": "বিস্ফোরক দ্রব্যবাহী যানবাহন চলাচল নিষেধ",
+      "file_name": "sign_012.webp",
+      "category": "mandatory_prohibitory"
+    },
+    {
+      "english_name": "Vehicles Exceeding Indicated Length Prohibited",
+      "bengali_name": "প্রদর্শিত দৈর্ঘ্যসীমার ঊর্ধ্বের যানবাহন চলাচল নিষেধ",
+      "file_name": "sign_013.webp",
+      "category": "mandatory_prohibitory"
+    },
+    {
+      "english_name": "Vehicles Exceeding Indicated Height Prohibited",
+      "bengali_name": "প্রদর্শিত উচ্চতাসীমার ঊর্ধ্বের যানবাহন চলাচল নিষেধ",
+      "file_name": "sign_014.webp",
+      "category": "mandatory_prohibitory"
+    },
+    {
+      "english_name": "Vehicles Exceeding Indicated Width Prohibited",
+      "bengali_name": "প্রদর্শিত প্রস্থসীমার ঊর্ধ্বের যানবাহন চলাচল নিষেধ",
+      "file_name": "sign_015.webp",
+      "category": "mandatory_prohibitory"
+    },
+    {
+      "english_name": "Vehicles Exceeding Indicated Weight Prohibited",
+      "bengali_name": "প্রদর্শিত ওজনসীমার ঊর্ধ্বের যানবাহন চলাচল নিষেধ",
+      "file_name": "sign_016.webp",
+      "category": "mandatory_prohibitory"
+    },
+    {
+      "english_name": "Axle Weight Limit",
+      "bengali_name": "এক্সেল ওজনের সর্বোচ্চ সীমা",
+      "file_name": "sign_017.webp",
+      "category": "mandatory_prohibitory"
+    },
+    {
+      "english_name": "No Parking",
+      "bengali_name": "পার্কিং নিষেধ",
+      "file_name": "sign_018.webp",
+      "category": "mandatory_prohibitory"
+    },
+    {
+      "english_name": "No Stopping",
+      "bengali_name": "থামানো নিষেধ",
+      "file_name": "sign_019.webp",
+      "category": "mandatory_prohibitory"
+    },
+    {
+      "english_name": "No Overtaking",
+      "bengali_name": "ওভারটেকিং নিষেধ",
+      "file_name": "sign_020.webp",
+      "category": "mandatory_prohibitory"
+    },
+    {
+      "english_name": "Stop",
+      "bengali_name": "না থেমে চলা নিষেধ",
+      "file_name": "sign_021.webp",
+      "category": "mandatory_prohibitory"
+    },
+    {
+      "english_name": "No Left Turn",
+      "bengali_name": "বামে মোড় নিষেধ",
+      "file_name": "sign_022.webp",
+      "category": "mandatory_prohibitory"
+    },
+    {
+      "english_name": "No Right Turn",
+      "bengali_name": "ডানে মোড় নিষেধ",
+      "file_name": "sign_023.webp",
+      "category": "mandatory_prohibitory"
+    },
+    {
+      "english_name": "No U-Turn",
+      "bengali_name": "ইউ টার্ন নিষেধ",
+      "file_name": "sign_024.webp",
+      "category": "mandatory_prohibitory"
+    },
+    {
+      "english_name": "No Horn",
+      "bengali_name": "হর্ন বাজানো নিষেধ",
+      "file_name": "sign_025.webp",
+      "category": "mandatory_prohibitory"
+    },
+    {
+      "english_name": "Maximum Speed Limit",
+      "bengali_name": "সর্বোচ্চ গতিসীমা",
+      "file_name": "sign_026.webp",
+      "category": "mandatory_prohibitory"
+    },
+    {
+      "english_name": "End of Speed Limit Restriction",
+      "bengali_name": "গতিসীমা বাধা নিষেধ শেষ",
+      "file_name": "sign_027.webp",
+      "category": "mandatory_prohibitory"
+    },
+    {
+      "english_name": "Temporary Stop",
+      "bengali_name": "সাময়িক 'থামার' চিহ্ন",
+      "file_name": "sign_028.webp",
+      "category": "mandatory_prohibitory"
+    },
+    {
+      "english_name": "Temporary Go",
+      "bengali_name": "সাময়িক 'চলাচল' চিহ্ন",
+      "file_name": "sign_029.webp",
+      "category": "mandatory_prohibitory"
+    },
+    {
+      "english_name": "End of All Restrictions",
+      "bengali_name": "বাধ্যবাধকতা শেষ",
+      "file_name": "sign_030.webp",
+      "category": "mandatory_prohibitory"
+    },
+    {
+      "english_name": "Straight Ahead Only",
+      "bengali_name": "শুধু সামনে চলুন",
+      "file_name": "sign_031.webp",
+      "category": "mandatory_compulsory"
+    },
+    {
+      "english_name": "Turn Left Only",
+      "bengali_name": "শুধু বাম দিকে চলাচল",
+      "file_name": "sign_032.webp",
+      "category": "mandatory_compulsory"
+    },
+    {
+      "english_name": "Turn Right Only",
+      "bengali_name": "শুধু ডান দিকে চলাচল",
+      "file_name": "sign_033.webp",
+      "category": "mandatory_compulsory"
+    },
+    {
+      "english_name": "Keep Left",
+      "bengali_name": "বামপাশ দিয়ে চলুন",
+      "file_name": "sign_034.webp",
+      "category": "mandatory_compulsory"
+    },
+    {
+      "english_name": "Keep Right",
+      "bengali_name": "ডানপাশ দিয়ে চলুন",
+      "file_name": "sign_035.webp",
+      "category": "mandatory_compulsory"
+    },
+    {
+      "english_name": "Ahead and Turn Right",
+      "bengali_name": "সামনে এগিয়ে ডানে মোড় দিন",
+      "file_name": "sign_036.webp",
+      "category": "mandatory_compulsory"
+    },
+    {
+      "english_name": "Ahead and Turn Left",
+      "bengali_name": "সামনে এগিয়ে বামে মোড় দিন",
+      "file_name": "sign_037.webp",
+      "category": "mandatory_compulsory"
+    },
+    {
+      "english_name": "Mini Roundabout",
+      "bengali_name": "ছোট গোল চক্কর",
+      "file_name": "sign_038.webp",
+      "category": "mandatory_compulsory"
+    },
+    {
+      "english_name": "Pass on Either Side",
+      "bengali_name": "যে কোন একদিকে যেতে পারেন",
+      "file_name": "sign_039.webp",
+      "category": "mandatory_compulsory"
+    },
+    {
+      "english_name": "One-Way Traffic",
+      "bengali_name": "একদিকে চলাচল",
+      "file_name": "sign_040.webp",
+      "category": "mandatory_compulsory"
+    },
+    {
+      "english_name": "One-Way Road (Left)",
+      "bengali_name": "একমুখি চলার রাস্তা (বাম)",
+      "file_name": "sign_041.webp",
+      "category": "mandatory_compulsory"
+    },
+    {
+      "english_name": "One-Way Road (Right)",
+      "bengali_name": "একমুখি চলার রাস্তা (ডান)",
+      "file_name": "sign_042.webp",
+      "category": "mandatory_compulsory"
+    },
+    {
+      "english_name": "Rickshaws Only",
+      "bengali_name": "শুধু রিক্সা চলাচলের রাস্তা",
+      "file_name": "sign_043.webp",
+      "category": "mandatory_compulsory"
+    },
+    {
+      "english_name": "Bicycles Only",
+      "bengali_name": "শুধু সাইকেল চলাচলের রাস্তা",
+      "file_name": "sign_044.webp",
+      "category": "mandatory_compulsory"
+    },
+    {
+      "english_name": "Cross Road",
+      "bengali_name": "দুই রাস্তার সংযোগ স্থল",
+      "file_name": "sign_045.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Main Road Ahead",
+      "bengali_name": "সম্মুখে প্রধান সড়ক",
+      "file_name": "sign_046.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Side Road",
+      "bengali_name": "পার্শ্ব রাস্তা",
+      "file_name": "sign_047.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Multiple Junctions Ahead",
+      "bengali_name": "সামনে ডানে বামে একাধিক সংযোগস্থান",
+      "file_name": "sign_048.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "T-Junction",
+      "bengali_name": "'টি' সংযোগস্থল",
+      "file_name": "sign_049.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Y-Junction",
+      "bengali_name": "'ওয়াই' সংযোগস্থল",
+      "file_name": "sign_050.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Traffic from Left",
+      "bengali_name": "বাম দিক থেকে যানবাহন আসছে",
+      "file_name": "sign_051.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Traffic from Right",
+      "bengali_name": "ডান দিক থেকে যানবাহন আসছে",
+      "file_name": "sign_052.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Roundabout",
+      "bengali_name": "গোল চক্কর",
+      "file_name": "sign_053.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Sharp Bend Right",
+      "bengali_name": "ডানে আচমকা মোড়",
+      "file_name": "sign_054.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Sharp Bend Left",
+      "bengali_name": "বামে আচমকা মোড়",
+      "file_name": "sign_055.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Sharp Right Hairpin Bend",
+      "bengali_name": "ডানে খাড়া বাঁকা",
+      "file_name": "sign_056.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Sharp Left Hairpin Bend",
+      "bengali_name": "বামে খাড়া বাঁকা",
+      "file_name": "sign_057.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Winding Road Right",
+      "bengali_name": "আঁকা বাঁকা রাস্তা (ডান)",
+      "file_name": "sign_058.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Winding Road Left",
+      "bengali_name": "আঁকা বাঁকা রাস্তা (বাম)",
+      "file_name": "sign_059.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Sudden Left Bend",
+      "bengali_name": "আচমকা বামে মোড়",
+      "file_name": "sign_060.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Road Narrows Both Sides",
+      "bengali_name": "উভর পার্শ্ব থেকে সড়ক সরু হচ্ছে",
+      "file_name": "sign_061.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Road Narrows Right",
+      "bengali_name": "ডান থেকে সড়ক সরু হচ্ছে",
+      "file_name": "sign_062.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Road Narrows Left",
+      "bengali_name": "বাম থেকে সড়ক সরু হচ্ছে",
+      "file_name": "sign_063.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Two-Lane Road Ahead",
+      "bengali_name": "দুটি পৃথক সড়ক মিলিত হয়ে দু-লেনের সড়কে পরিণত হয়েছে",
+      "file_name": "sign_064.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Traffic Signals Ahead",
+      "bengali_name": "ট্রাফিক সিগনাল",
+      "file_name": "sign_065.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Steep Descent",
+      "bengali_name": "অত্যাধিক ঢালু নিম্নগামী সড়ক",
+      "file_name": "sign_066.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Steep Ascent",
+      "bengali_name": "অত্যাধিক ঢালু উর্ধ্বগামী সড়ক",
+      "file_name": "sign_067.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Height Restriction Ahead",
+      "bengali_name": "সামনে সীমিত উচ্চতার বাধ্যবাধকতা আছে",
+      "file_name": "sign_068.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Two-Way Traffic",
+      "bengali_name": "সম্মুখে উভয় দিকে সোজাসুজি চলাচল",
+      "file_name": "sign_069.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Crossroad Traffic Ahead",
+      "bengali_name": "সম্মুখে উভয় দিকে আড়াআড়ি চলাচলকারী সড়ক",
+      "file_name": "sign_070.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Pedestrian Crossing",
+      "bengali_name": "পথচারী পারাপার",
+      "file_name": "sign_071.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Pedestrians Ahead",
+      "bengali_name": "সামনে সড়কে পথচারী চলাচল করে",
+      "file_name": "sign_072.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "School Ahead",
+      "bengali_name": "সামনে স্কুল",
+      "file_name": "sign_073.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Cattle Crossing",
+      "bengali_name": "গবাদী পশু",
+      "file_name": "sign_074.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Wild Animals",
+      "bengali_name": "বন্য প্রাণী",
+      "file_name": "sign_075.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Uneven Road",
+      "bengali_name": "অসমতল সড়ক",
+      "file_name": "sign_076.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Slippery Road",
+      "bengali_name": "পিচ্ছিল সড়ক",
+      "file_name": "sign_077.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Speed Breaker Ahead",
+      "bengali_name": "সামনে গতিরোধক",
+      "file_name": "sign_078.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Low Flying Aircraft",
+      "bengali_name": "নিম্ন উচ্চতায় উড়ন্ত বিমান",
+      "file_name": "sign_079.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Falling Rocks",
+      "bengali_name": "শিলা পতন",
+      "file_name": "sign_080.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Dangerous Ditch",
+      "bengali_name": "বিপদজনক খাদ",
+      "file_name": "sign_081.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Narrow Bridge",
+      "bengali_name": "সরু সেতু",
+      "file_name": "sign_082.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Other Hazards",
+      "bengali_name": "অন্যান্য বিপদশঙ্কা",
+      "file_name": "sign_083.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Check Post",
+      "bengali_name": "চেক পয়েন্ট",
+      "file_name": "sign_084.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Road Works",
+      "bengali_name": "সড়কে কাজ চলছে",
+      "file_name": "sign_085.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Loose Gravel",
+      "bengali_name": "শিথিল মুড়ি-পাথর",
+      "file_name": "sign_086.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Cyclists and Rickshaws Ahead",
+      "bengali_name": "সামনে সাইকেল/রিক্সা চলাচল করে",
+      "file_name": "sign_087.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Dangerous Current",
+      "bengali_name": "বিপদজনক সোঁতার",
+      "file_name": "sign_088.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Ferry Terminal",
+      "bengali_name": "ফেরীঘাট",
+      "file_name": "sign_089.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "River or Ditch Bank",
+      "bengali_name": "নদী/খাদের কিনার",
+      "file_name": "sign_090.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Blind Person",
+      "bengali_name": "অন্ধমানুষ",
+      "file_name": "sign_091.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Unguarded Level Crossing",
+      "bengali_name": "অরক্ষিত রেলক্রসিং",
+      "file_name": "sign_092.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Guarded Level Crossing",
+      "bengali_name": "রক্ষিত রেলক্রসিং",
+      "file_name": "sign_093.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "Level Crossing Ahead",
+      "bengali_name": "সামনে রেলক্রসিং",
+      "file_name": "sign_094.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "T-Junction Ahead (Turn Either Side)",
+      "bengali_name": "সামনে 'টি' জংশন (ডানে অথবা বামে মোড় নিন)",
+      "file_name": "sign_095.webp",
+      "category": "warning"
+    },
+    {
+      "english_name": "No Through Road",
+      "bengali_name": "ভিতর দিয়ে যাওয়ার রাস্তা নেই",
+      "file_name": "sign_096.webp",
+      "category": "informative"
+    },
+    {
+      "english_name": "Pedestrian Crossing",
+      "bengali_name": "পথচারী পারাপার",
+      "file_name": "sign_097.webp",
+      "category": "informative"
+    },
+    {
+      "english_name": "Parking",
+      "bengali_name": "পার্কিং এর স্থান",
+      "file_name": "sign_098.webp",
+      "category": "informative"
+    },
+    {
+      "english_name": "Fuel Station",
+      "bengali_name": "ফিলিং স্টেশন",
+      "file_name": "sign_099.webp",
+      "category": "informative"
+    },
+    {
+      "english_name": "Vehicle Repair",
+      "bengali_name": "মোটরযান মেরামত স্থল",
+      "file_name": "sign_100.webp",
+      "category": "informative"
+    },
+    {
+      "english_name": "First Aid",
+      "bengali_name": "প্রাথমিক চিকিৎসা কেন্দ্র",
+      "file_name": "sign_101.webp",
+      "category": "informative"
+    },
+    {
+      "english_name": "Hospital",
+      "bengali_name": "হাসপাতাল",
+      "file_name": "sign_102.webp",
+      "category": "informative"
+    },
+    {
+      "english_name": "Restaurant",
+      "bengali_name": "রেস্তোরা",
+      "file_name": "sign_103.webp",
+      "category": "informative"
+    },
+    {
+      "english_name": "Picnic Area",
+      "bengali_name": "বনভোজন এলাকা",
+      "file_name": "sign_104.webp",
+      "category": "informative"
+    },
+    {
+      "english_name": "Mosque",
+      "bengali_name": "মসজিদ",
+      "file_name": "sign_105.webp",
+      "category": "informative"
+    },
+    {
+      "english_name": "Temple",
+      "bengali_name": "মন্দির",
+      "file_name": "sign_106.webp",
+      "category": "informative"
+    },
+    {
+      "english_name": "Fire Station",
+      "bengali_name": "দমকল বাহিনী",
+      "file_name": "sign_107.webp",
+      "category": "informative"
+    },
+    {
+      "english_name": "Toilet",
+      "bengali_name": "শৌচাগার",
+      "file_name": "sign_108.webp",
+      "category": "informative"
+    },
+    {
+      "english_name": "Cycle and Rickshaw Lane Ahead",
+      "bengali_name": "সামনে সাইকেল এবং রিক্সা চলাচলের লেন",
+      "file_name": "sign_109.webp",
+      "category": "informative"
+    },
+    {
+      "english_name": "Pedestrian, Cycle and Rickshaw Road",
+      "bengali_name": "পথচারী, সাইকেল এবং রিক্সা চলাচলের রাস্তা",
+      "file_name": "sign_110.webp",
+      "category": "informative"
+    },
+    {
+      "english_name": "Rickshaw and Cycle Lane",
+      "bengali_name": "রিক্সা এবং সাইকেল চলাচলের লেন",
+      "file_name": "sign_111.webp",
+      "category": "informative"
+    },
+    {
+      "english_name": "Bus Stop",
+      "bengali_name": "বাস থামার স্থান",
+      "file_name": "sign_112.webp",
+      "category": "informative"
+    },
+    {
+      "english_name": "Taxi Stand",
+      "bengali_name": "ট্যাক্সি দাঁড়ানোর স্থান",
+      "file_name": "sign_113.webp",
+      "category": "informative"
+    },
+    {
+      "english_name": "Police Station",
+      "bengali_name": "থানা",
+      "file_name": "sign_114.webp",
+      "category": "informative"
+    },
+    {
+      "english_name": "Toll Road or Toll Bridge",
+      "bengali_name": "টোল সড়ক অথবা টোল সেতু",
+      "file_name": "sign_115.webp",
+      "category": "informative"
+    },
+    {
+      "english_name": "Town or City Entry Sign",
+      "bengali_name": "গ্রাম, শহর বা নগরী চিহ্নিতকরণ",
+      "file_name": "sign_116.webp",
+      "category": "informative"
+    },
+    {
+      "english_name": "Town or City Exit Sign",
+      "bengali_name": "শহর অথবা নগর থেকে বহির্গমন পথ",
+      "file_name": "sign_117.webp",
+      "category": "informative"
+    },
+    {
+      "english_name": "Pedestrian Path to Facilities",
+      "bengali_name": "পাঠাগার, টয়লেট, রেস্টেশন ইত্যাদি স্থানে পথচারী যাওয়ার পথ",
+      "file_name": "sign_118.webp",
+      "category": "informative"
+    }
+  ]
+}

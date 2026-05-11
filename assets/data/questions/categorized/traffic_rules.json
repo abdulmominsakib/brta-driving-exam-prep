@@ -1,0 +1,446 @@
+{
+    "category": "Traffic Rules",
+    "questions": [
+        {
+            "question": "পাকা ও ভালো রাস্তায় ৫০ কিলোমিটার গতিতে চললে নিরাপদ দূরত্ব কত হবে?",
+            "options": [
+                {
+                    "text": "২৫ মিটার",
+                    "is_correct": true
+                },
+                {
+                    "text": "৩৫ মিটার",
+                    "is_correct": false
+                },
+                {
+                    "text": "২০ মিটার",
+                    "is_correct": false
+                },
+                {
+                    "text": "৪৫ মিটার",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "জেব্রাক্রসিং ব্যবহার করা হয় কেন?",
+            "options": [
+                {
+                    "text": "পথচারিকে অগ্রাধিকার দেয়ার জন্য",
+                    "is_correct": true
+                },
+                {
+                    "text": "পথচারিকে থামানোর জন্য",
+                    "is_correct": false
+                },
+                {
+                    "text": "গাড়ি পার্কিং করার জন্য",
+                    "is_correct": false
+                },
+                {
+                    "text": "গাড়ি ঘোরানোর জন্য",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "গোল চক্করে গাড়ি চালানোর নিয়ম কি?",
+            "options": [
+                {
+                    "text": "ডান দিকে",
+                    "is_correct": true
+                },
+                {
+                    "text": "সোজা দিকে",
+                    "is_correct": false
+                },
+                {
+                    "text": "বাম দিকে",
+                    "is_correct": false
+                },
+                {
+                    "text": "পিছনের দিকে",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "ফুয়েল লাইনে বাতাস প্রবেশ করে ফুয়েল সরবরাহ হওয়াকে কী বলে?",
+            "options": [
+                {
+                    "text": "এয়ার লক",
+                    "is_correct": true
+                },
+                {
+                    "text": "ভেপার লক",
+                    "is_correct": false
+                },
+                {
+                    "text": "ফুয়েল জ্যাম",
+                    "is_correct": false
+                },
+                {
+                    "text": "এয়ার গ্যাপ",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "কোন্ জায়গায় হর্ন বাজাতে হয়?",
+            "options": [
+                {
+                    "text": "অন্ধ বাঁকে ও কার টেকিং করার সময়",
+                    "is_correct": true
+                },
+                {
+                    "text": "জনাকীর্ণ রাস্তায়",
+                    "is_correct": false
+                },
+                {
+                    "text": "লাল বাতিতে থামার সময়",
+                    "is_correct": false
+                },
+                {
+                    "text": "হাইওয়েতে চলার সময়",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "নিয়মিত গাড়িতে কি পরীক্ষা করতে হয়?",
+            "options": [
+                {
+                    "text": "জ্বালানী, পানি, লুবঅয়েল, ব্রেক অয়েল",
+                    "is_correct": true
+                },
+                {
+                    "text": "এসি, সাউন্ড সিস্টেম, সিট কভার",
+                    "is_correct": false
+                },
+                {
+                    "text": "গাড়ির রঙ ও পোলিশ",
+                    "is_correct": false
+                },
+                {
+                    "text": "চাকার হাওয়া ও টায়ার প্রেশার",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "পাকা ও ভালো রাস্তায় ৫০ মাইল গতিতে গাড়ি চালালে নিরাপদ দূরত্ব কত হবে?",
+            "options": [
+                {
+                    "text": "৫০ গজ বা ১৫০ ফুট",
+                    "is_correct": true
+                },
+                {
+                    "text": "৪০ গজ বা ১২০ ফুট",
+                    "is_correct": false
+                },
+                {
+                    "text": "৬০ গজ বা ১৮০ ফুট",
+                    "is_correct": false
+                },
+                {
+                    "text": "৩০ গজ বা ৯০ ফুট",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "ট্রাফিক সিগন্যাল বা সংকেত কত প্রকার কি কি?",
+            "options": [
+                {
+                    "text": "তিন প্রকার। ক) বাহুর সংকেত খ) আলোর সংকেত গ) শব্দ সংকেত",
+                    "is_correct": true
+                },
+                {
+                    "text": "দুই প্রকার। ক) হাতের ইশারা খ) লাইট",
+                    "is_correct": false
+                },
+                {
+                    "text": "চার প্রকার। ক) বাহু খ) আলো গ) শব্দ ঘ) পতাকা",
+                    "is_correct": false
+                },
+                {
+                    "text": "পাঁচ প্রকার। ক) লাল খ) হলুদ গ) সবুজ ঘ) নীল ঙ) সাদা",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "লেভেল ক্রসিং বা রেলক্রসিং কত প্রকার ও কি কি?",
+            "options": [
+                {
+                    "text": "লেভেলক্রসিং ২প্রকার। ক) রক্ষিত লেভেল ক্রসিং খ) অরক্ষিত লেভেল ক্রসিং",
+                    "is_correct": true
+                },
+                {
+                    "text": "লেভেলক্রসিং ৩ প্রকার। ক) রক্ষিত খ) অরক্ষিত গ) আংশিক রক্ষিত",
+                    "is_correct": false
+                },
+                {
+                    "text": "লেভেলক্রসিং ৪ প্রকার। ক) মেইন খ) সাব গ) ব্রাঞ্চ ঘ) লোকাল",
+                    "is_correct": false
+                },
+                {
+                    "text": "লেভেলক্রসিং ১ প্রকার। শুধুমাত্র রক্ষিত",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "জেব্রা ক্রসিংয়ে চালকের কর্তব্য কি?",
+            "options": [
+                {
+                    "text": "পথচারীকে অগ্রাধিকার দেয়া",
+                    "is_correct": true
+                },
+                {
+                    "text": "পথচারীকে থামতে ইশারা করা",
+                    "is_correct": false
+                },
+                {
+                    "text": "হর্ন বাজিয়ে সতর্ক করা",
+                    "is_correct": false
+                },
+                {
+                    "text": "গাড়ি থামিয়ে অপেক্ষা না করা",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "গাড়ি রাস্তায় চলাচলের সময় হঠাৎ বন্ধ হয়ে গেলে কি চেক করতে হয়?",
+            "options": [
+                {
+                    "text": "জ্বালানী",
+                    "is_correct": true
+                },
+                {
+                    "text": "চাকার হাওয়া",
+                    "is_correct": false
+                },
+                {
+                    "text": "লুকিং গ্লাস",
+                    "is_correct": false
+                },
+                {
+                    "text": "হেড লাইট",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "কোন কোন জায়গায় হর্ন বাজানো নিষেধ?",
+            "options": [
+                {
+                    "text": "স্কুল, মসজিদ, মাদ্রাসা ও হাসপাতালের সামনে",
+                    "is_correct": true
+                },
+                {
+                    "text": "বাজার, শপিং মল ও বাস স্টপেজ এর সামনে",
+                    "is_correct": false
+                },
+                {
+                    "text": "হাইওয়ে, মহাসড়ক ও ফ্লাইওভারে",
+                    "is_correct": false
+                },
+                {
+                    "text": "ট্রাফিক সিগন্যাল, মোড় ও গোল চক্করে",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "কোথায় অবশ্যই হর্ন বাজাতে হয়?",
+            "options": [
+                {
+                    "text": "অন্ধ বাঁকে",
+                    "is_correct": true
+                },
+                {
+                    "text": "সরু রাস্তায়",
+                    "is_correct": false
+                },
+                {
+                    "text": "ব্যস্ত রাস্তায়",
+                    "is_correct": false
+                },
+                {
+                    "text": "হাইওয়েতে",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "মহাসড়কে জাতীয় গতি সীমা কত?",
+            "options": [
+                {
+                    "text": "৪০ কি.মি.",
+                    "is_correct": true
+                },
+                {
+                    "text": "৫০ কি.মি.",
+                    "is_correct": false
+                },
+                {
+                    "text": "৬০ কি.মি.",
+                    "is_correct": false
+                },
+                {
+                    "text": "৭০ কি.মি.",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "মহাসড়কে সর্বোচ্চ গতি কত?",
+            "options": [
+                {
+                    "text": "৮০ কি.মি.",
+                    "is_correct": true
+                },
+                {
+                    "text": "৯০ কি.মি.",
+                    "is_correct": false
+                },
+                {
+                    "text": "১০০ কি.মি.",
+                    "is_correct": false
+                },
+                {
+                    "text": "১১০ কি.মি.",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "লেভেল ক্রসিং কত প্রকার ও কি কি?",
+            "options": [
+                {
+                    "text": "দুই প্রকার। রক্ষিত ও অরক্ষিত",
+                    "is_correct": true
+                },
+                {
+                    "text": "তিন প্রকার। রক্ষিত, অরক্ষিত ও অর্ধ-রক্ষিত",
+                    "is_correct": false
+                },
+                {
+                    "text": "চার প্রকার। গেটযুক্ত, গেটবিহীন, সংকেতযুক্ত, সংকেতবিহীন",
+                    "is_correct": false
+                },
+                {
+                    "text": "এক প্রকার। শুধুমাত্র গেটযুক্ত",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "রাস্তায় গাড়ির কাগজপত্র পরিদর্শন করার ক্ষমতা রাখেন কারা?",
+            "options": [
+                {
+                    "text": "পুলিশের সর্ব নিম্ন এস আই। মোবাইল কোর্টে ও বিআরটিএ কর্মকর্তা",
+                    "is_correct": true
+                },
+                {
+                    "text": "যে কোনো ট্রাফিক পুলিশ ও আনসার সদস্য",
+                    "is_correct": false
+                },
+                {
+                    "text": "স্থানীয় জনপ্রতিনিধি ও স্বেচ্ছাসেবক",
+                    "is_correct": false
+                },
+                {
+                    "text": "সামরিক বাহিনীর সদস্য",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "মোটর সাইকেল চালানোর সর্বোচ্চ গতি কত?",
+            "options": [
+                {
+                    "text": "৭০ কি.মি.",
+                    "is_correct": true
+                },
+                {
+                    "text": "৮০ কি.মি.",
+                    "is_correct": false
+                },
+                {
+                    "text": "৬০ কি.মি.",
+                    "is_correct": false
+                },
+                {
+                    "text": "৫০ কি.মি.",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "জেব্রা ক্রসিং এ চালকের করণীয় কি?",
+            "options": [
+                {
+                    "text": "পথচারীকে পাড়াপাড়ের অগ্রাধিকার দেওয়া",
+                    "is_correct": true
+                },
+                {
+                    "text": "সতর্কতার সাথে হর্ন বাজিয়ে চলা",
+                    "is_correct": false
+                },
+                {
+                    "text": "গতি কমানো কিন্তু না থামা",
+                    "is_correct": false
+                },
+                {
+                    "text": "ডান পাশ দিয়ে বেরিয়ে যাওয়া",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "মোটরসাইকেলের সর্বোচ্চ গতিবেগ কত?",
+            "options": [
+                {
+                    "text": "৭০ মাইল / ঘন্টা",
+                    "is_correct": true
+                },
+                {
+                    "text": "৬০ মাইল / ঘন্টা",
+                    "is_correct": false
+                },
+                {
+                    "text": "৮০ মাইল / ঘন্টা",
+                    "is_correct": false
+                },
+                {
+                    "text": "৯০ মাইল / ঘন্টা",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "গোল চক্করে গাড়ি চালানোর নিয়ম",
+            "options": [
+                {
+                    "text": "ডান দিক থেকে আগত গাড়ীকে প্রাধান্য দিন",
+                    "is_correct": true
+                },
+                {
+                    "text": "বাম দিক থেকে আগত গাড়ীকে প্রাধান্য দিন",
+                    "is_correct": false
+                },
+                {
+                    "text": "সোজা চলে যান যদি রাস্তা ফাঁকা থাকে",
+                    "is_correct": false
+                },
+                {
+                    "text": "দ্রুত গতিতে চক্কর পার হন",
+                    "is_correct": false
+                }
+            ]
+        }
+    ]
+}

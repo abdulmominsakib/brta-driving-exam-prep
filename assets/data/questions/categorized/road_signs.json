@@ -1,0 +1,537 @@
+{
+    "category": "Road Signs",
+    "questions": [
+        {
+            "question_text": "লাল বৃত্তের বিভিন্ন নিম্নোক্ত গতিসীমা লিখা থাকলে কি বুঝায়?",
+            "options": [
+                {
+                    "text": "বাধ্যতামূলক নিষেধ নির্দেশ করে",
+                    "is_correct": true
+                },
+                {
+                    "text": "সর্বনিম্ন গতিসীমা নির্দেশ করে",
+                    "is_correct": false
+                },
+                {
+                    "text": "সুপারিশকৃত গতিসীমা নির্দেশ করে",
+                    "is_correct": false
+                },
+                {
+                    "text": "সাময়িক সতর্কতা নির্দেশ করে",
+                    "is_correct": false
+                }
+            ],
+            "question_image": null
+        },
+        {
+            "question_text": "ট্রাফিক সিগন্যাল লাইট চক্র বা অনুক্রম গুলি কি কি?",
+            "options": [
+                {
+                    "text": "লাল, হলুদ ও সবুজ",
+                    "is_correct": true
+                },
+                {
+                    "text": "সবুজ, লাল ও হলুদ",
+                    "is_correct": false
+                },
+                {
+                    "text": "হলুদ, সবুজ ও লাল",
+                    "is_correct": false
+                },
+                {
+                    "text": "লাল, নীল ও সবুজ",
+                    "is_correct": false
+                }
+            ],
+            "question_image": null
+        },
+        {
+            "question_text": "নীল রংয়ের আয়তক্ষেত্র কোন ধরনের সাইন?",
+            "options": [
+                {
+                    "text": "সাধারণ তথ্যমূলক সাইন",
+                    "is_correct": true
+                },
+                {
+                    "text": "বাধ্যতামূলক মান্য সাইন",
+                    "is_correct": false
+                },
+                {
+                    "text": "বিশেষ সতর্কতামূলক সাইন",
+                    "is_correct": false
+                },
+                {
+                    "text": "সাময়িক নিষেধাজ্ঞা সাইন",
+                    "is_correct": false
+                }
+            ],
+            "question_image": null
+        },
+        {
+            "question_text": "রাস্তার মাঝখানে অখন্ডিত সাদা দাগ থাকলে করণীয় কি?",
+            "options": [
+                {
+                    "text": "ওভার টেকিং করা যাবে না",
+                    "is_correct": true
+                },
+                {
+                    "text": "সতর্কতার সাথে ওভার টেকিং করা যাবে",
+                    "is_correct": false
+                },
+                {
+                    "text": "শুধুমাত্র রাতে ওভার টেকিং করা যাবে",
+                    "is_correct": false
+                },
+                {
+                    "text": "ধীর গতিতে ওভার টেকিং করা যাবে",
+                    "is_correct": false
+                }
+            ],
+            "question_image": null
+        },
+        {
+            "question_text": "আয়তক্ষেত্রে লেখা P থাকলে কি বুঝায়?",
+            "options": [
+                {
+                    "text": "পার্কিং করার জায়গা",
+                    "is_correct": true
+                },
+                {
+                    "text": "পুলিশ স্টেশনের অবস্থান",
+                    "is_correct": false
+                },
+                {
+                    "text": "পাবলিক টয়লেট",
+                    "is_correct": false
+                },
+                {
+                    "text": "পথচারী পারাপার",
+                    "is_correct": false
+                }
+            ],
+            "question_image": null
+        },
+        {
+            "question_text": "লাল বৃত্তে ৮০ লেখা থাকলে কি বুঝায়?",
+            "options": [
+                {
+                    "text": "জাতীয় গতিসীমা",
+                    "is_correct": true
+                },
+                {
+                    "text": "সর্বনিম্ন গতিসীমা",
+                    "is_correct": false
+                },
+                {
+                    "text": "সুপারিশকৃত গতিসীমা",
+                    "is_correct": false
+                },
+                {
+                    "text": "রাস্তার দৈর্ঘ্য ৮০ কি.মি.",
+                    "is_correct": false
+                }
+            ],
+            "question_image": null
+        },
+        {
+            "question_text": "বৃত্তে ২০ ট (20 T) লিখা থাকলে কি বুঝায়?",
+            "options": [
+                {
+                    "text": "২০ টনের অধিক বোঝাইকৃত যানবহন চলাচল নিষেধ",
+                    "is_correct": true
+                },
+                {
+                    "text": "কমপক্ষে ২০ টন বোঝাইকৃত যানবহন চলাচল বাধ্যতামূলক",
+                    "is_correct": false
+                },
+                {
+                    "text": "সর্বোচ্চ ২০ কিলোমিটার গতিসীমা",
+                    "is_correct": false
+                },
+                {
+                    "text": "ব্রিজের টোল ২০ টাকা",
+                    "is_correct": false
+                }
+            ],
+            "question_image": null
+        },
+        {
+            "question_text": "সতর্কতা মূলক চিহ্ন কোন আকৃতির?",
+            "options": [
+                {
+                    "text": "ত্রিভুজ বা তিন কোনা বিশিষ্ট",
+                    "is_correct": true
+                },
+                {
+                    "text": "বৃত্তাকার বা গোল আকৃতির",
+                    "is_correct": false
+                },
+                {
+                    "text": "আয়তাকার বা চার কোনা বিশিষ্ট",
+                    "is_correct": false
+                },
+                {
+                    "text": "অষ্টভুজ বা আট কোনা বিশিষ্ট",
+                    "is_correct": false
+                }
+            ],
+            "question_image": null
+        },
+        {
+            "question_text": "তথ্য মূলক চিহ্ন কোন আকৃতির?",
+            "options": [
+                {
+                    "text": "চতুভুজ বা চার কোনা বিশিষ্ট",
+                    "is_correct": true
+                },
+                {
+                    "text": "বৃত্তাকার বা গোল আকৃতির",
+                    "is_correct": false
+                },
+                {
+                    "text": "ত্রিভুজ বা তিন কোনা বিশিষ্ট",
+                    "is_correct": false
+                },
+                {
+                    "text": "ডিম্বাকৃতি বা ওভাল আকৃতির",
+                    "is_correct": false
+                }
+            ],
+            "question_image": null
+        },
+        {
+            "question_text": "ট্রাফিক সাইন কত প্রকার ও কি কি?",
+            "options": [
+                {
+                    "text": "তিন প্রকার। বাধ্যতামূলক, সতর্কতামূলক, তথ্যমূলক",
+                    "is_correct": true
+                },
+                {
+                    "text": "চার প্রকার। বাধ্যতামূলক, সতর্কতামূলক, তথ্যমূলক, নির্দেশমূলক",
+                    "is_correct": false
+                },
+                {
+                    "text": "দুই প্রকার। নিষেধমূলক ও অনুমতিমূলক",
+                    "is_correct": false
+                },
+                {
+                    "text": "তিন প্রকার। লাল, হলুদ ও সবুজ",
+                    "is_correct": false
+                }
+            ],
+            "question_image": null
+        },
+        {
+            "question_text": "বাধ্যতামূলক না বোধক চিহ্ন থাকে-",
+            "options": [
+                {
+                    "text": "লাল বৃত্তে",
+                    "is_correct": true
+                },
+                {
+                    "text": "নীল বৃত্তে",
+                    "is_correct": false
+                },
+                {
+                    "text": "লাল ত্রিভুজে",
+                    "is_correct": false
+                },
+                {
+                    "text": "নীল আয়তক্ষেত্রে",
+                    "is_correct": false
+                }
+            ],
+            "question_image": null
+        },
+        {
+            "question_text": "এই চিহ্নটি দ্বারা কি বুঝায়?",
+            "options": [
+                {
+                    "text": "সাইকেল চলাচল নিষেধ",
+                    "is_correct": true
+                },
+                {
+                    "text": "শুধুমাত্র সাইকেল চলাচলের পথ",
+                    "is_correct": false
+                },
+                {
+                    "text": "সাইকেল সাবধানে চালান",
+                    "is_correct": false
+                },
+                {
+                    "text": "সাইকেল মেরামতের দোকান",
+                    "is_correct": false
+                }
+            ],
+            "question_image": "assets/images/road_signs_for_questions/Prohibitory_No_Cyclists.svg"
+        },
+        {
+            "question_text": "এই চিহ্নটি দ্বারা কি বুঝায়?",
+            "options": [
+                {
+                    "text": "মোটরযান চলাচল নিষেধ",
+                    "is_correct": true
+                },
+                {
+                    "text": "শুধুমাত্র মোটরযান চলাচলের পথ",
+                    "is_correct": false
+                },
+                {
+                    "text": "মোটরযান সাবধানে চালান",
+                    "is_correct": false
+                },
+                {
+                    "text": "মোটরযান পার্কিং নিষেধ",
+                    "is_correct": false
+                }
+            ],
+            "question_image": "assets/images/road_signs_for_questions/Prohibitory_No_Motor_Vehicles.svg"
+        },
+        {
+            "question_text": "এই চিহ্নটি দ্বারা কি বুঝায়?",
+            "options": [
+                {
+                    "text": "ওভারটেকিং নিষেধ",
+                    "is_correct": true
+                },
+                {
+                    "text": "ওভারটেকিং করা যাবে",
+                    "is_correct": false
+                },
+                {
+                    "text": "সাবধানে ওভারটেকিং করুন",
+                    "is_correct": false
+                },
+                {
+                    "text": "সামনে সরু রাস্তা",
+                    "is_correct": false
+                }
+            ],
+            "question_image": "assets/images/road_signs_for_questions/Prohibitory_No_Overtaking.svg"
+        },
+        {
+            "question_text": "এই চিহ্নটি দ্বারা কি বুঝায়?",
+            "options": [
+                {
+                    "text": "পার্কিং নিষেধ",
+                    "is_correct": true
+                },
+                {
+                    "text": "সংরক্ষিত পার্কিং এলাকা",
+                    "is_correct": false
+                },
+                {
+                    "text": "সাময়িক পার্কিং করা যাবে",
+                    "is_correct": false
+                },
+                {
+                    "text": "পার্কিং এর জন্য নির্ধারিত স্থান",
+                    "is_correct": false
+                }
+            ],
+            "question_image": "assets/images/road_signs_for_questions/Prohibitory_No_Parking.svg"
+        },
+        {
+            "question_text": "এই চিহ্নটি দ্বারা কি বুঝায়?",
+            "options": [
+                {
+                    "text": "থামানো নিষেধ",
+                    "is_correct": true
+                },
+                {
+                    "text": "পার্কিং নিষেধ",
+                    "is_correct": false
+                },
+                {
+                    "text": "সামনে থামতে হবে",
+                    "is_correct": false
+                },
+                {
+                    "text": "প্রবেশ নিষেধ",
+                    "is_correct": false
+                }
+            ],
+            "question_image": "assets/images/road_signs_for_questions/Prohibitory_No_Stopping.svg"
+        },
+        {
+            "question_text": "এই চিহ্নটি দ্বারা কি বুঝায়?",
+            "options": [
+                {
+                    "text": "পথচারী চলাচল নিষেধ",
+                    "is_correct": true
+                },
+                {
+                    "text": "শুধুমাত্র পথচারী চলাচলের পথ",
+                    "is_correct": false
+                },
+                {
+                    "text": "সামনে পথচারী পারাপার",
+                    "is_correct": false
+                },
+                {
+                    "text": "সাবধানে পথচারী চলাচল করুন",
+                    "is_correct": false
+                }
+            ],
+            "question_image": "assets/images/road_signs_for_questions/Prohibitory_No_Pedestrians.svg"
+        },
+        {
+            "question_text": "এই চিহ্নটি দ্বারা কি বুঝায়?",
+            "options": [
+                {
+                    "text": "পথচারী পারাপার",
+                    "is_correct": true
+                },
+                {
+                    "text": "পথচারী চলাচল নিষেধ",
+                    "is_correct": false
+                },
+                {
+                    "text": "স্কুল ক্রসিং",
+                    "is_correct": false
+                },
+                {
+                    "text": "সামনে খেলার মাঠ",
+                    "is_correct": false
+                }
+            ],
+            "question_image": "assets/images/road_signs_for_questions/Warning_Pedestrian_Crossing.svg"
+        },
+        {
+            "question_text": "এই চিহ্নটি দ্বারা কি বুঝায়?",
+            "options": [
+                {
+                    "text": "শিশু-কিশোর / স্কুল ক্রসিং",
+                    "is_correct": true
+                },
+                {
+                    "text": "পথচারী পারাপার",
+                    "is_correct": false
+                },
+                {
+                    "text": "সামনে খেলার মাঠ",
+                    "is_correct": false
+                },
+                {
+                    "text": "শিশুদের প্রবেশ নিষেধ",
+                    "is_correct": false
+                }
+            ],
+            "question_image": "assets/images/road_signs_for_questions/Warning_Children.svg"
+        },
+        {
+            "question_text": "এই চিহ্নটি দ্বারা কি বুঝায়?",
+            "options": [
+                {
+                    "text": "শিশু-কিশোর",
+                    "is_correct": true
+                },
+                {
+                    "text": "পথচারী পারাপার",
+                    "is_correct": false
+                },
+                {
+                    "text": "সামনে পার্ক",
+                    "is_correct": false
+                },
+                {
+                    "text": "দৌড়ানো নিষেধ",
+                    "is_correct": false
+                }
+            ],
+            "question_image": "assets/images/road_signs_for_questions/Warning_Children.svg"
+        },
+        {
+            "question_text": "এই চিহ্নটি দ্বারা কি বুঝায়?",
+            "options": [
+                {
+                    "text": "প্রবেশ নিষেধ",
+                    "is_correct": true
+                },
+                {
+                    "text": "একমুখী রাস্তা (সামনে)",
+                    "is_correct": false
+                },
+                {
+                    "text": "রাস্তা বন্ধ",
+                    "is_correct": false
+                },
+                {
+                    "text": "থামানো নিষেধ",
+                    "is_correct": false
+                }
+            ],
+            "question_image": "assets/images/road_signs_for_questions/Prohibitory_No_Entry.svg"
+        },
+        {
+            "question_text": "এই চিহ্নটি দ্বারা কি বুঝায়?",
+            "options": [
+                {
+                    "text": "অসমতল/ত্রুটিপূর্ণ সড়ক",
+                    "is_correct": true
+                },
+                {
+                    "text": "সামনে গতিরোধক",
+                    "is_correct": false
+                },
+                {
+                    "text": "পিচ্ছিল সড়ক",
+                    "is_correct": false
+                },
+                {
+                    "text": "সামনে পাহাড়",
+                    "is_correct": false
+                }
+            ],
+            "question_image": null
+        },
+        {
+            "question_text": "এই চিহ্নটি দ্বারা কি বুঝায়?",
+            "options": [
+                {
+                    "text": "সামনে গতিরোধক",
+                    "is_correct": true
+                },
+                {
+                    "text": "অসমতল সড়ক",
+                    "is_correct": false
+                },
+                {
+                    "text": "রেল ক্রসিং",
+                    "is_correct": false
+                },
+                {
+                    "text": "সরু সেতু",
+                    "is_correct": false
+                }
+            ],
+            "question_image": null
+        },
+        {
+            "question_text": "নিচের কোনটি 'পার্কিং নিষেধ' সাইন?",
+            "options": [
+                {
+                    "text": "ক",
+                    "option_image": "assets/images/road_signs_for_questions/Prohibitory_No_Parking.svg",
+                    "is_correct": true
+                },
+                {
+                    "text": "খ",
+                    "option_image": "assets/images/road_signs_for_questions/Prohibitory_No_Overtaking.svg",
+                    "is_correct": false
+                },
+                {
+                    "text": "গ",
+                    "option_image": "assets/images/road_signs_for_questions/Prohibitory_No_Horn.svg",
+                    "is_correct": false
+                },
+                {
+                    "text": "ঘ",
+                    "option_image": "assets/images/road_signs_for_questions/Prohibitory_No_Stopping.svg",
+                    "is_correct": false
+                }
+            ],
+            "question_image": null
+        }
+    ]
+}

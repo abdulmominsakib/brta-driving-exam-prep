@@ -1,0 +1,908 @@
+{
+    "category": "Mechanisms",
+    "questions": [
+        {
+            "question": "কুলিং ফ্যানরে কাজ কী?",
+            "options": [
+                {
+                    "text": "রেডিয়েটরের পানিকে ঠান্ডা করা",
+                    "is_correct": true
+                },
+                {
+                    "text": "ইঞ্জিন অয়েল গরম করা",
+                    "is_correct": false
+                },
+                {
+                    "text": "ব্রেক অয়েল সরবরাহ করা",
+                    "is_correct": false
+                },
+                {
+                    "text": "ইঞ্জিন স্টার্ট দেওয়া",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "টেম্পারেচার মিটার ইঞ্জিনের কী নির্দেশ করে?",
+            "options": [
+                {
+                    "text": "ইঞ্জিনের কার্যকরী তাপমাত্রা",
+                    "is_correct": true
+                },
+                {
+                    "text": "গাড়ির গতিবেগ",
+                    "is_correct": false
+                },
+                {
+                    "text": "জ্বালানীর পরিমাণ",
+                    "is_correct": false
+                },
+                {
+                    "text": "ব্যাটারির ভোল্টেজ",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "ব্রেক মাস্টার সিলিন্ডারে ব্রেক অয়েলে লেভেল কম থাকলে কী হতে পারে?",
+            "options": [
+                {
+                    "text": "ব্রেক ফেল",
+                    "is_correct": true
+                },
+                {
+                    "text": "ইঞ্জিন ওভারহিট",
+                    "is_correct": false
+                },
+                {
+                    "text": "টায়ার পাংচার",
+                    "is_correct": false
+                },
+                {
+                    "text": "স্টিয়ারিং লক",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "ক্লাচের কাজ কি?",
+            "options": [
+                {
+                    "text": "ইঞ্জিনের গতি বৃদ্ধি করা",
+                    "is_correct": false
+                },
+                {
+                    "text": "ইঞ্জিন এবং গিয়ার বক্সের সংযোগ করা ও বিচ্ছিন্ন করা",
+                    "is_correct": true
+                },
+                {
+                    "text": "গাড়ির ব্রেকিং সিস্টেম নিয়ন্ত্রণ করা",
+                    "is_correct": false
+                },
+                {
+                    "text": "ইঞ্জিন অয়েল পাম্প সচল রাখা",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "ইঞ্জিন অতিরিক্ত গরম হওয়ার কারণ -",
+            "options": [
+                {
+                    "text": "কুলিং ফ্যান কাজ না করলে",
+                    "is_correct": false
+                },
+                {
+                    "text": "রেডিয়েটরে পানি ও মবিল না থাকলে বা কম থাকলে",
+                    "is_correct": false
+                },
+                {
+                    "text": "উপরের সবগুলি",
+                    "is_correct": true
+                },
+                {
+                    "text": "শুধুমাত্র এসি চালালে",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "টায়ার অতিরিক্ত ক্ষয় হয় কেন?",
+            "options": [
+                {
+                    "text": "চাকার এলাইনমেন্ট সঠিক না থাকলে",
+                    "is_correct": false
+                },
+                {
+                    "text": "চাকার হাওয়া কম বা বেশী থাকলে",
+                    "is_correct": false
+                },
+                {
+                    "text": "অতিরিক্ত লোড বহন করলে",
+                    "is_correct": false
+                },
+                {
+                    "text": "উপরের সবগুলো",
+                    "is_correct": true
+                }
+            ]
+        },
+        {
+            "question": "একটি ইঞ্জিন অত্যাধিক গরম অবস্থায় চলছে তা কীভাবে বুঝা যাবে?",
+            "options": [
+                {
+                    "text": "গাড়ির হেডলাইট অটোমেটিক নিভে যাবে",
+                    "is_correct": false
+                },
+                {
+                    "text": "ড্যাশবোর্ড টেম্পারেচার মিটারের কাঁটা লাল দাগে চলে যাবে",
+                    "is_correct": true
+                },
+                {
+                    "text": "ইঞ্জিন থেকে কালো ধোঁয়া বের হবে",
+                    "is_correct": false
+                },
+                {
+                    "text": "গাড়ির গতি হঠাৎ কমে যাবে",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "লুব ওয়েল কোথায় দিতে হবে?",
+            "options": [
+                {
+                    "text": "রেডিয়েটরে",
+                    "is_correct": false
+                },
+                {
+                    "text": "ফুয়েল ট্যাংকে",
+                    "is_correct": false
+                },
+                {
+                    "text": "ইঞ্জিন হেডকভারে",
+                    "is_correct": true
+                },
+                {
+                    "text": "ব্যাটারিতে",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "ইঞ্জিনের কুলিং সিস্টেমে কুলিং মিডিয়া হিসেবে কী ব্যবহৃত হয়?",
+            "options": [
+                {
+                    "text": "পেট্রোল",
+                    "is_correct": false
+                },
+                {
+                    "text": "পানি",
+                    "is_correct": true
+                },
+                {
+                    "text": "গিয়ার অয়েল",
+                    "is_correct": false
+                },
+                {
+                    "text": "নাইট্রোজেন গ্যাস",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "ইঞ্জিনের প্রতি সিলিন্ডারে স্পার্ক প্লাগ থাকে কতটি?",
+            "options": [
+                {
+                    "text": "২টি",
+                    "is_correct": false
+                },
+                {
+                    "text": "৪টি",
+                    "is_correct": false
+                },
+                {
+                    "text": "১টি",
+                    "is_correct": true
+                },
+                {
+                    "text": "৩টি",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "সাইলেন্সার পাইপের কাজ কী?",
+            "options": [
+                {
+                    "text": "গাড়ির গতি বাড়ানো",
+                    "is_correct": false
+                },
+                {
+                    "text": "শব্দকে নিয়ন্ত্রণ করা",
+                    "is_correct": true
+                },
+                {
+                    "text": "ইঞ্জিন ঠান্ডা রাখা",
+                    "is_correct": false
+                },
+                {
+                    "text": "বাতাস বিশুদ্ধ করা",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "ব্যাটারীর চার্জ মাপার যন্ত্রের নাম কী?",
+            "options": [
+                {
+                    "text": "থার্মোমিটার",
+                    "is_correct": false
+                },
+                {
+                    "text": "হাইড্রোমিটার",
+                    "is_correct": false
+                },
+                {
+                    "text": "এভোমিটার",
+                    "is_correct": true
+                },
+                {
+                    "text": "ব্যারোমিটার",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "স্পার্ক প্লাগের কাজ কী?",
+            "options": [
+                {
+                    "text": "ইঞ্জিন অয়েল ফিল্টার করা",
+                    "is_correct": false
+                },
+                {
+                    "text": "সিলিন্ডারে অগ্নি স্ফুলিঙ্গ তৈরি করা",
+                    "is_correct": true
+                },
+                {
+                    "text": "ব্যাটারি চার্জ দেওয়া",
+                    "is_correct": false
+                },
+                {
+                    "text": "কার্বুরেটরে তেল সরবরাহ করা",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "ইঞ্জিন ওয়েল কোথায় ঢালতে হয়?",
+            "options": [
+                {
+                    "text": "ইঞ্জিনের উপর হেড কভারের ক্যাপ খুলে",
+                    "is_correct": true
+                },
+                {
+                    "text": "রেডিয়েটরের ক্যাপ খুলে",
+                    "is_correct": false
+                },
+                {
+                    "text": "ফুয়েল ট্যাংকের ক্যাপ খুলে",
+                    "is_correct": false
+                },
+                {
+                    "text": "এয়ার ফিল্টারের ভিতর দিয়ে",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "ইঞ্জিন কাকে বলে?",
+            "options": [
+                {
+                    "text": "যে যন্ত্র জ্বালানী হতে তাপ শক্তি উৎপাদন করে যান্ত্রিক শক্তিতে রুপান্তর করে",
+                    "is_correct": true
+                },
+                {
+                    "text": "যে যন্ত্র বৈদ্যুতিক শক্তিকে আলোক শক্তিতে রুপান্তর করে",
+                    "is_correct": false
+                },
+                {
+                    "text": "যে যন্ত্র বাতাসের গতিবেগ পরিমাপ করে",
+                    "is_correct": false
+                },
+                {
+                    "text": "যে যন্ত্র যান্ত্রিক শক্তিকে বিদ্যুৎ শক্তিতে রুপান্তর করে",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "ইঞ্জিনের জ্বালানী খরচ বেড়ে যাওয়ার কারণ কি কি?",
+            "options": [
+                {
+                    "text": "চাকার হাওয়া সঠিক থাকলে",
+                    "is_correct": false
+                },
+                {
+                    "text": "মবিল ফিল্টার নতুন লাগালে",
+                    "is_correct": false
+                },
+                {
+                    "text": "স্পার্ক প্লাগ বা এয়ার ফিল্টার নষ্ট হলে",
+                    "is_correct": true
+                },
+                {
+                    "text": "উন্নত মানের জ্বালানী ব্যবহার করলে",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "গাড়ি রাস্তায় চলার সময় হঠাৎ ইঞ্জিন বন্ধ হলে কী চেক করতে হবে?",
+            "options": [
+                {
+                    "text": "জ্বালানী",
+                    "is_correct": true
+                },
+                {
+                    "text": "টায়ার প্রেসার",
+                    "is_correct": false
+                },
+                {
+                    "text": "ব্রেক ফ্লুইড",
+                    "is_correct": false
+                },
+                {
+                    "text": "হেডলাইট",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "ডিস্টল ওয়াটার কোথায় ঢালতে হয়?",
+            "options": [
+                {
+                    "text": "ফুয়েল ট্যাংকে",
+                    "is_correct": false
+                },
+                {
+                    "text": "রেডিয়েটরে",
+                    "is_correct": false
+                },
+                {
+                    "text": "ব্যাটারীতে",
+                    "is_correct": true
+                },
+                {
+                    "text": "ব্রেক মাস্টার সিলিন্ডারে",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "কুলিং ফ্যানের কাজ কী?",
+            "options": [
+                {
+                    "text": "রেডিয়েটর পানি ঠান্ডা করা",
+                    "is_correct": true
+                },
+                {
+                    "text": "ইঞ্জিনের বাতাস গরম করা",
+                    "is_correct": false
+                },
+                {
+                    "text": "ব্যাটারি চার্জ দেওয়া",
+                    "is_correct": false
+                },
+                {
+                    "text": "গাড়ির ভিতর ঠান্ডা রাখা",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "ইঞ্জিনের কার্বুরেটর এর অবস্থান কোথায়?",
+            "options": [
+                {
+                    "text": "ইনটেক ম্যানিফোল্ডের উপরে, এয়ার ক্লিনারের নিচে",
+                    "is_correct": true
+                },
+                {
+                    "text": "এক্সহস্ট ম্যানিফোল্ডের সাথে",
+                    "is_correct": false
+                },
+                {
+                    "text": "ফুয়েল ট্যাংকের ভিতরে",
+                    "is_correct": false
+                },
+                {
+                    "text": "ইঞ্জিন ব্লকের নিচে",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "ক্লাচ এর কাজ কী?",
+            "options": [
+                {
+                    "text": "গিয়ার পরিবর্তন সহজ করা ও ইঞ্জিনের সংযোগ বিচ্ছিন্ন করা",
+                    "is_correct": true
+                },
+                {
+                    "text": "ইঞ্জিনের তাপমাত্রা নিয়ন্ত্রণ করা",
+                    "is_correct": false
+                },
+                {
+                    "text": "গাড়ির ব্রেক কার্যকর করা",
+                    "is_correct": false
+                },
+                {
+                    "text": "ব্যাটারি চার্জ দেওয়া",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "ইঞ্জিনের ক্ষমতা মূলত কী কারণে কমে যায়?",
+            "options": [
+                {
+                    "text": "কম্প্রেশন লিক করলে",
+                    "is_correct": true
+                },
+                {
+                    "text": "অকটেন ব্যবহার করলে",
+                    "is_correct": false
+                },
+                {
+                    "text": "নতুন স্পার্ক প্লাগ লাগালে",
+                    "is_correct": false
+                },
+                {
+                    "text": "সময়মত গিয়ার পরিবর্তন করলে",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "ইঞ্জিন ঠান্ডা অবস্থায় চলা ঠিক না কেন?",
+            "options": [
+                {
+                    "text": "জ্বালানি খরচ বাড়ে ও ইঞ্জিনের ক্ষতি হয়",
+                    "is_correct": true
+                },
+                {
+                    "text": "গাড়ি স্টার্ট বন্ধ হয়ে যায়",
+                    "is_correct": false
+                },
+                {
+                    "text": "ব্রেক কাজ করে না",
+                    "is_correct": false
+                },
+                {
+                    "text": "ব্যাটারি ডিচার্জ হয়ে যায়",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "ইঞ্জিন অয়েল এর মেয়াদ শেষ হলে নতুন অয়েল প্রবেশের সময় কি পরিবর্তন করতে হয়?",
+            "options": [
+                {
+                    "text": "ইঞ্জিন অয়েল ফিল্টার",
+                    "is_correct": true
+                },
+                {
+                    "text": "ফুয়েল ফিল্টার",
+                    "is_correct": false
+                },
+                {
+                    "text": "এয়ার ফিল্টার",
+                    "is_correct": false
+                },
+                {
+                    "text": "স্পার্ক প্লাগ",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "মোটর গাড়িতে সাধারণত কত ভোল্টের ব্যাটারী ব্যবহার করা হয়?",
+            "options": [
+                {
+                    "text": "৬ ভোল্ট বা ১২ ভোল্টের",
+                    "is_correct": true
+                },
+                {
+                    "text": "২৪০ ভোল্টের",
+                    "is_correct": false
+                },
+                {
+                    "text": "৪৮ ভোল্টের",
+                    "is_correct": false
+                },
+                {
+                    "text": "১.৫ ভোল্টের",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "গাড়ির পিছনের অবস্থান বোঝার জন্য প্রতি মিনিটে কতবার লুকিং গ্লাসে তাকাতে হবে?",
+            "options": [
+                {
+                    "text": "৬ থেকে ৮ বার",
+                    "is_correct": true
+                },
+                {
+                    "text": "১ থেকে ২ বার",
+                    "is_correct": false
+                },
+                {
+                    "text": "২০ থেকে ৩০ বার",
+                    "is_correct": false
+                },
+                {
+                    "text": "তাকানোর প্রয়োজন নেই",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "লুব অয়েল বা মবিলের কাজ কি?",
+            "options": [
+                {
+                    "text": "ইঞ্জিন ঠান্ডা রাখা ও ঘর্ষণ কমানো",
+                    "is_correct": false
+                },
+                {
+                    "text": "ইঞ্জিনের ঘূর্ণায়মান যন্ত্রাংশকে পিচ্ছিল করা ও ক্ষয় রোধ করা",
+                    "is_correct": true
+                },
+                {
+                    "text": "জ্বালানী দহনে সাহায্য করা",
+                    "is_correct": false
+                },
+                {
+                    "text": "বৈদ্যুতিক সংযোগ ঠিক রাখা",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "টায়ার রোটেশন কি?",
+            "options": [
+                {
+                    "text": "টায়ার এক স্থান থেকে অন্য স্থানে পরিবর্তন করা",
+                    "is_correct": true
+                },
+                {
+                    "text": "চাকা ঘুরানো বা স্পিন করা",
+                    "is_correct": false
+                },
+                {
+                    "text": "নতুন টায়ার কেনা",
+                    "is_correct": false
+                },
+                {
+                    "text": "পাংচার মেরামত করা",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "মরিচা পরিস্কার করার পর ব্যাটারীর টার্মিনালে কি করা উচিত?",
+            "options": [
+                {
+                    "text": "পানি ঢালা উচিত",
+                    "is_correct": false
+                },
+                {
+                    "text": "গ্রিজ বা ভেসলিন লাগানো উচিত",
+                    "is_correct": true
+                },
+                {
+                    "text": "তেল মালিশ করা উচিত",
+                    "is_correct": false
+                },
+                {
+                    "text": "কিছুই করার প্রয়োজন নেই",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "কুলিং ফ্যানের কাজ কি?",
+            "options": [
+                {
+                    "text": "রেডিয়েটরের পানিকে ঠান্ডা করা",
+                    "is_correct": true
+                },
+                {
+                    "text": "ইঞ্জিন অয়েল গরম করা",
+                    "is_correct": false
+                },
+                {
+                    "text": "ব্রেক শু ঠান্ডা রাখা",
+                    "is_correct": false
+                },
+                {
+                    "text": "কেবিনে বাতাস দেওয়া",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "ব্রেক মাস্টার সিলিন্ডারে ব্রেক অয়েল কম থাকলে কি হয়?",
+            "options": [
+                {
+                    "text": "ব্রেক ফেল হওয়ার সম্ভাবনা থাকে",
+                    "is_correct": true
+                },
+                {
+                    "text": "গাড়ির গতি কমে যায়",
+                    "is_correct": false
+                },
+                {
+                    "text": "গিয়ার শিফটিং সমস্যা হয়",
+                    "is_correct": false
+                },
+                {
+                    "text": "স্টার্ট বন্ধ হয়ে যায়",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "সাইলেন্সারের কাজ কি?",
+            "options": [
+                {
+                    "text": "ইঞ্জিনের শব্দকে নিয়ন্ত্রন করা",
+                    "is_correct": true
+                },
+                {
+                    "text": "ইঞ্জিনের ধোঁয়া শোধন করা",
+                    "is_correct": false
+                },
+                {
+                    "text": "বাতাস ফিল্টার করা",
+                    "is_correct": false
+                },
+                {
+                    "text": "জ্বালানী সাশ্রয় করা",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "ইঞ্জিন অতিরিক্ত গরম হলে কি ভাবে বুঝা যায়?",
+            "options": [
+                {
+                    "text": "ড্যাশবোর্ডের টেম্পারেচার মিটারের সাহায্যে",
+                    "is_correct": true
+                },
+                {
+                    "text": "আরপিএম মিটারের সাহায্যে",
+                    "is_correct": false
+                },
+                {
+                    "text": "ফুয়েল গেজের সাহায্যে",
+                    "is_correct": false
+                },
+                {
+                    "text": "ওডোমিটারের সাহায্যে",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "ইঞ্জিন কি বা ইঞ্জিন কাকে বলে?",
+            "options": [
+                {
+                    "text": "যে যন্ত্র তাপশক্তির সাহায্যে যান্ত্রিক শক্তি উৎপন্ন করে",
+                    "is_correct": true
+                },
+                {
+                    "text": "যে যন্ত্র বিদ্যুৎ উৎপাদন করে",
+                    "is_correct": false
+                },
+                {
+                    "text": "যে যন্ত্র গাড়ির গতি নিয়ন্ত্রণ করে",
+                    "is_correct": false
+                },
+                {
+                    "text": "যে যন্ত্র বাতাস সংকুচিত করে",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "ইঞ্জিনের কার্যক্ষমতা কি কারণে কমে যায়?",
+            "options": [
+                {
+                    "text": "সিলিন্ডারের কম্প্রেশন লিক করলে",
+                    "is_correct": true
+                },
+                {
+                    "text": "অকটেন বেশি ব্যবহার করলে",
+                    "is_correct": false
+                },
+                {
+                    "text": "এয়ার ফিল্টার পরিষ্কার থাকলে",
+                    "is_correct": false
+                },
+                {
+                    "text": "নিয়মিত মবিল পরিবর্তন করলে",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "মোটর গাড়িতে সাধারণত কত ভোল্টের ব্যাটারী ব্যবহৃত হয়?",
+            "options": [
+                {
+                    "text": "১২ ভোল্ট",
+                    "is_correct": true
+                },
+                {
+                    "text": "৬ ভোল্ট",
+                    "is_correct": false
+                },
+                {
+                    "text": "২৪ ভোল্ট",
+                    "is_correct": false
+                },
+                {
+                    "text": "৪৮ ভোল্ট",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "ইঞ্জিন কত প্রকার?",
+            "options": [
+                {
+                    "text": "স্ট্রোক অনুযায়ী ২ প্রকার। টু স্ট্রোক ও ফোর স্ট্রোক",
+                    "is_correct": true
+                },
+                {
+                    "text": "জ্বালানী অনুযায়ী ৩ প্রকার। পেট্রোল, ডিজেল ও অক্টেন",
+                    "is_correct": false
+                },
+                {
+                    "text": "সিলিন্ডার অনুযায়ী ৪ প্রকার",
+                    "is_correct": false
+                },
+                {
+                    "text": "ক্ষমতা অনুযায়ী ২ প্রকার। হাই ও লো পাওয়ার",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "রেডিয়েটরের কাজ কি?",
+            "options": [
+                {
+                    "text": "পানি ধারণ করা ও ইঞ্জিন ঠান্ডা রাখা",
+                    "is_correct": true
+                },
+                {
+                    "text": "রিজার্ভ ফুয়েল জমা রাখা",
+                    "is_correct": false
+                },
+                {
+                    "text": "গরম বাতাস বের করে দেওয়া",
+                    "is_correct": false
+                },
+                {
+                    "text": "ব্রেক ফ্লুইড সংরক্ষণ করা",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "লুব অয়েল কিসের সাহায্যে মাপা হয়?",
+            "options": [
+                {
+                    "text": "ডিপস্টিক",
+                    "is_correct": true
+                },
+                {
+                    "text": "ফুয়েল গেজ",
+                    "is_correct": false
+                },
+                {
+                    "text": "প্রেসার মিটার",
+                    "is_correct": false
+                },
+                {
+                    "text": "থার্মোস্ট্যাট",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "গাড়ির ব্যাটারীর কাজ কি?",
+            "options": [
+                {
+                    "text": "ইঞ্জিন স্টার্ট করা ও বিদ্যুৎ সরবরাহ করা",
+                    "is_correct": true
+                },
+                {
+                    "text": "এসি কম্প্রেসার চালানো",
+                    "is_correct": false
+                },
+                {
+                    "text": "চাকা ঘোরানো",
+                    "is_correct": false
+                },
+                {
+                    "text": "ইঞ্জিন ঠান্ডা রাখা",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "শক এবজভারের কাজ কি?",
+            "options": [
+                {
+                    "text": "গাড়ির ঝাঁকুনি শোষণ করা",
+                    "is_correct": true
+                },
+                {
+                    "text": "গাড়ির গতি বৃদ্ধি করা",
+                    "is_correct": false
+                },
+                {
+                    "text": "ব্রেক দ্রুত কার্যকর করা",
+                    "is_correct": false
+                },
+                {
+                    "text": "শব্দ দূষণ কমানো",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "স্পার্ক প্লাগের কাজ কি?",
+            "options": [
+                {
+                    "text": "দহন কক্ষে স্ফুলিঙ্গ তৈরি করা",
+                    "is_correct": true
+                },
+                {
+                    "text": "কার্বুরেটরে বাতাস প্রবেশ করানো",
+                    "is_correct": false
+                },
+                {
+                    "text": "তেল পরিষ্কার করা",
+                    "is_correct": false
+                },
+                {
+                    "text": "ইঞ্জিন ঠান্ডা করা",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "question": "গাড়িতে কুলিং সিস্টেমের কাজ কি?",
+            "options": [
+                {
+                    "text": "ইঞ্জিনকে অতিরিক্ত গরম হওয়া থেকে রক্ষা করা",
+                    "is_correct": true
+                },
+                {
+                    "text": "গাড়ির ভিতর ঠান্ডা রাখা (এসি)",
+                    "is_correct": false
+                },
+                {
+                    "text": "জ্বালানী ঠান্ডা রাখা",
+                    "is_correct": false
+                },
+                {
+                    "text": "একজস্ট গ্যাস ঠান্ডা করা",
+                    "is_correct": false
+                }
+            ]
+        }
+    ]
+}
