@@ -44,7 +44,8 @@ class GuideTutorialHelper {
             builder: (context, controller) {
               return _buildTutorialContent(
                 title: "বিস্তারিত পড়ুন",
-                description: "যেকোনো একটি গাইডের উপর ক্লিক করলে আপনি সেটির বিস্তারিত নিয়মাবলী এবং প্রয়োজনীয় তথ্যাদি জানতে পারবেন।",
+                description:
+                    "যেকোনো একটি গাইডের উপর ক্লিক করলে আপনি সেটির বিস্তারিত নিয়মাবলী এবং প্রয়োজনীয় তথ্যাদি জানতে পারবেন।",
                 theme: theme,
                 controller: controller,
                 isLast: true,
@@ -119,10 +120,7 @@ class GuideTutorialHelper {
     VoidCallback? onFinish,
   }) {
     TutorialCoachMark(
-      targets: createTargets(
-        firstGuideKey: firstGuideKey,
-        context: context,
-      ),
+      targets: createTargets(firstGuideKey: firstGuideKey, context: context),
       colorShadow: Colors.black,
       opacityShadow: 0.8,
       onFinish: onFinish,

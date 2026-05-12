@@ -3,7 +3,7 @@ import 'dart:async';
 
 class SoundService {
   static final SoLoud _soLoud = SoLoud.instance;
-  
+
   // AudioSource objects to keep in memory for instant playback
   static AudioSource? _clickSource;
   static AudioSource? _successSource;
@@ -15,17 +15,19 @@ class SoundService {
 
   static Future<void> init() async {
     if (_isInitialized) return;
-    
+
     try {
       await _soLoud.init();
-      
+
       // Load assets into memory (Asset paths must be full paths for SoLoud)
       _clickSource = await _soLoud.loadAsset('assets/sounds/click.mp3');
       _successSource = await _soLoud.loadAsset('assets/sounds/success.mp3');
       _errorSource = await _soLoud.loadAsset('assets/sounds/error.mp3');
-      _birdChirpSource = await _soLoud.loadAsset('assets/sounds/bird_chirp.mp3');
+      _birdChirpSource = await _soLoud.loadAsset(
+        'assets/sounds/bird_chirp.mp3',
+      );
       _loadingSource = await _soLoud.loadAsset('assets/sounds/loading.mp3');
-      
+
       _isInitialized = true;
     } catch (e) {
       // print('Error initializing SoLoud: $e');

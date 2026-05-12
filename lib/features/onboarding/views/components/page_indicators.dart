@@ -25,7 +25,9 @@ class PageIndicators extends StatelessWidget {
           width: isActive ? 28 : 8,
           height: 8,
           decoration: BoxDecoration(
-            color: isActive ? activeColor : ShadTheme.of(context).colorScheme.border,
+            color: isActive
+                ? activeColor
+                : ShadTheme.of(context).colorScheme.border,
             borderRadius: BorderRadius.circular(100),
           ),
         );

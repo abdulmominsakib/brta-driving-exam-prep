@@ -10,7 +10,6 @@ import '../../features/mock_exam/views/mock_exam_page.dart';
 import '../../features/mock_exam_quiz/views/mock_exam_quiz_page.dart';
 import '../../features/onboarding/views/onboarding_page.dart';
 import '../../features/practice/views/practice_page.dart';
-import '../../features/practice_quiz/views/practice_quiz_page.dart';
 import '../../features/practice_quiz/views/practice_cards_page.dart';
 import '../../features/settings/views/settings_page.dart';
 import '../../features/traffic_signs/views/traffic_signs_page.dart';
@@ -153,25 +152,11 @@ final appRouter = GoRouter(
       parentNavigatorKey: _rootNavigatorKey, // Full screen
       pageBuilder: (context, state) {
         final extra = state.extra as Map<String, dynamic>?;
-        final isPractice = extra?['isPractice'] as bool? ?? false;
-
-        if (isPractice) {
-          return CupertinoPage(
-            key: state.pageKey,
-            child: PracticeCardsPage(
-              dataPath: extra?['dataPath'] as String?,
-              levelIndex: extra?['levelIndex'] as int?,
-            ),
-          );
-        }
 
         return CupertinoPage(
           key: state.pageKey,
-          child: PracticeQuizPage(
+          child: PracticeCardsPage(
             dataPath: extra?['dataPath'] as String?,
-            isPractice: false,
-            questionLimit: extra?['questionLimit'] as int?,
-            passThreshold: extra?['passThreshold'] as int?,
             levelIndex: extra?['levelIndex'] as int?,
           ),
         );

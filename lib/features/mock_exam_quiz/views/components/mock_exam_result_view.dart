@@ -32,17 +32,19 @@ class MockExamResultView extends StatelessWidget {
                     ? HugeIcons.strokeRoundedTick02
                     : HugeIcons.strokeRoundedCancel01,
                 size: 80,
-                color: isPassed ? const Color(0xFF58CC02) : const Color(0xFFFF4B4B),
+                color: isPassed
+                    ? const Color(0xFF58CC02)
+                    : const Color(0xFFFF4B4B),
               ),
               const SizedBox(height: 24),
               Text(
                 isPassed ? 'অসাধারণ!' : 'আবার চেষ্টা করুন!',
                 style: ShadTheme.of(context).textTheme.h2.copyWith(
-                      color: isPassed
-                          ? const Color(0xFF58CC02)
-                          : const Color(0xFFFF4B4B),
-                      fontWeight: FontWeight.bold,
-                    ),
+                  color: isPassed
+                      ? const Color(0xFF58CC02)
+                      : const Color(0xFFFF4B4B),
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               const SizedBox(height: 16),
               Container(
@@ -57,26 +59,25 @@ class MockExamResultView extends StatelessWidget {
                     Text(
                       'স্কোর',
                       style: ShadTheme.of(context).textTheme.large.copyWith(
-                            color: Colors.grey,
-                            fontWeight: FontWeight.bold,
-                          ),
+                        color: Colors.grey,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                     const SizedBox(height: 8),
                     Text(
                       '$correctAnswers / $totalQuestions',
                       style: ShadTheme.of(context).textTheme.h3.copyWith(
-                            color: const Color(0xFF58CC02),
-                            fontWeight: FontWeight.bold,
-                          ),
+                        color: const Color(0xFF58CC02),
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                     if (passThreshold != null) ...[
                       const SizedBox(height: 8),
                       Text(
                         'পাস করতে প্রয়োজন: $passThreshold',
-                        style: ShadTheme.of(context)
-                            .textTheme
-                            .p
-                            .copyWith(color: Colors.grey),
+                        style: ShadTheme.of(
+                          context,
+                        ).textTheme.p.copyWith(color: Colors.grey),
                       ),
                     ],
                   ],
@@ -92,19 +93,16 @@ class MockExamResultView extends StatelessWidget {
                     color: const Color(0xFF58CC02),
                     borderRadius: BorderRadius.circular(16),
                     border: const Border(
-                      bottom: BorderSide(
-                        color: Color(0xFF58A700),
-                        width: 4.0,
-                      ),
+                      bottom: BorderSide(color: Color(0xFF58A700), width: 4.0),
                     ),
                   ),
                   child: Center(
                     child: Text(
                       'চালিয়ে যান',
                       style: ShadTheme.of(context).textTheme.large.copyWith(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                          ),
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),

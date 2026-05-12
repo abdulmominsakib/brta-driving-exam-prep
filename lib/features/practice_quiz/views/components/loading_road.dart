@@ -47,7 +47,8 @@ class _LoadingRoadState extends State<LoadingRoad>
                     size: const Size(200, 300),
                     painter: RoadPainter(
                       animationValue: _controller.value,
-                      isDark: ShadTheme.of(context).brightness == Brightness.dark,
+                      isDark:
+                          ShadTheme.of(context).brightness == Brightness.dark,
                     ),
                   );
                 },
@@ -73,7 +74,6 @@ class _LoadingRoadState extends State<LoadingRoad>
                   size: 40,
                 ),
               ),
-
             ],
           ),
         ),
@@ -86,7 +86,6 @@ class _LoadingRoadState extends State<LoadingRoad>
             color: ShadTheme.of(context).colorScheme.mutedForeground,
           ),
         ),
-
       ],
     );
   }
@@ -97,7 +96,6 @@ class RoadPainter extends CustomPainter {
   final bool isDark;
 
   RoadPainter({required this.animationValue, required this.isDark});
-
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -126,7 +124,6 @@ class RoadPainter extends CustomPainter {
       ..strokeWidth = 4
       ..style = PaintingStyle.stroke;
 
-
     canvas.drawLine(
       Offset(centerX - 50, 0),
       Offset(centerX - 50, size.height),
@@ -144,7 +141,6 @@ class RoadPainter extends CustomPainter {
       ..color = isDark ? const Color(0xFF64748B) : Colors.white
       ..strokeWidth = 4
       ..strokeCap = StrokeCap.round;
-
 
     final double dashHeight = 30;
     final double gapHeight = 20;

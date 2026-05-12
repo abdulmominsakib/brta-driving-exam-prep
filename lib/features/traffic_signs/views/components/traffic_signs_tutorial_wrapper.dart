@@ -3,18 +3,22 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'traffic_signs_tutorial_helper.dart';
 
 class TrafficSignsTutorialWrapper extends StatefulWidget {
-  const TrafficSignsTutorialWrapper({
-    super.key,
-    required this.builder,
-  });
+  const TrafficSignsTutorialWrapper({super.key, required this.builder});
 
-  final Widget Function(BuildContext context, GlobalKey filterKey, GlobalKey firstSignKey) builder;
+  final Widget Function(
+    BuildContext context,
+    GlobalKey filterKey,
+    GlobalKey firstSignKey,
+  )
+  builder;
 
   @override
-  State<TrafficSignsTutorialWrapper> createState() => _TrafficSignsTutorialWrapperState();
+  State<TrafficSignsTutorialWrapper> createState() =>
+      _TrafficSignsTutorialWrapperState();
 }
 
-class _TrafficSignsTutorialWrapperState extends State<TrafficSignsTutorialWrapper> {
+class _TrafficSignsTutorialWrapperState
+    extends State<TrafficSignsTutorialWrapper> {
   final GlobalKey _filterKey = GlobalKey();
   final GlobalKey _firstSignKey = GlobalKey();
 
@@ -27,7 +31,8 @@ class _TrafficSignsTutorialWrapperState extends State<TrafficSignsTutorialWrappe
   Future<void> _checkAndShowTutorial() async {
     try {
       final prefs = await SharedPreferences.getInstance();
-      final hasShownTutorial = prefs.getBool('hasShownTrafficSignsTutorial') ?? false;
+      final hasShownTutorial =
+          prefs.getBool('hasShownTrafficSignsTutorial') ?? false;
 
       if (!hasShownTutorial) {
         Future.delayed(const Duration(milliseconds: 1000), () {

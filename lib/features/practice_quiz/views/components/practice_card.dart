@@ -20,7 +20,8 @@ class PracticeCard extends StatefulWidget {
   State<PracticeCard> createState() => _PracticeCardState();
 }
 
-class _PracticeCardState extends State<PracticeCard> with SingleTickerProviderStateMixin {
+class _PracticeCardState extends State<PracticeCard>
+    with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<double> _animation;
 
@@ -31,12 +32,9 @@ class _PracticeCardState extends State<PracticeCard> with SingleTickerProviderSt
       duration: const Duration(milliseconds: 500),
       vsync: this,
     );
-    
+
     _animation = Tween<double>(begin: 0.0, end: 1.0).animate(
-      CurvedAnimation(
-        parent: _controller,
-        curve: Curves.easeInOutCubic,
-      ),
+      CurvedAnimation(parent: _controller, curve: Curves.easeInOutCubic),
     );
 
     if (widget.isFlipped) {
@@ -71,16 +69,14 @@ class _PracticeCardState extends State<PracticeCard> with SingleTickerProviderSt
         builder: (context, child) {
           final angle = _animation.value * pi;
           final isFront = angle < pi / 2;
-          
+
           return Transform(
             transform: Matrix4.identity()
               ..setEntry(3, 2, 0.0012) // Perspective
               ..rotateY(angle),
             alignment: Alignment.center,
             child: isFront
-                ? RepaintBoundary(
-                    child: _CardFront(question: widget.question),
-                  )
+                ? RepaintBoundary(child: _CardFront(question: widget.question))
                 : Transform(
                     transform: Matrix4.rotationY(pi),
                     alignment: Alignment.center,
@@ -207,11 +203,16 @@ class _CardBack extends StatelessWidget {
     final theme = ShadTheme.of(context);
     final correctOption = question.options.firstWhere((o) => o.isCorrect);
 
+    final solidBackColor = Color.alphaBlend(
+      theme.colorScheme.primary.withValues(alpha: 0.08),
+      theme.colorScheme.card,
+    );
+
     return Container(
       width: double.infinity,
       height: double.infinity,
       decoration: BoxDecoration(
-        color: theme.colorScheme.primary.withValues(alpha: 0.08),
+        color: solidBackColor,
         borderRadius: BorderRadius.circular(32),
         border: Border.all(
           color: theme.colorScheme.primary.withValues(alpha: 0.2),
@@ -265,7 +266,8 @@ class _CardBack extends StatelessWidget {
                         if (correctOption.optionImage != null) ...[
                           ClipRRect(
                             borderRadius: BorderRadius.circular(12),
-                            child: correctOption.optionImage!
+                            child:
+                                correctOption.optionImage!
                                     .toLowerCase()
                                     .endsWith('.svg')
                                 ? SvgPicture.asset(

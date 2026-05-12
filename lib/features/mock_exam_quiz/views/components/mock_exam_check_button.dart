@@ -26,7 +26,9 @@ class MockExamCheckButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(16),
           border: Border(
             bottom: BorderSide(
-              color: isEnabled ? const Color(0xFF58A700) : const Color(0xFFAFB2B7),
+              color: isEnabled
+                  ? const Color(0xFF58A700)
+                  : const Color(0xFFAFB2B7),
               width: 4.0,
             ),
           ),
@@ -35,9 +37,9 @@ class MockExamCheckButton extends StatelessWidget {
           child: Text(
             'চেক করুন',
             style: ShadTheme.of(context).textTheme.large.copyWith(
-                  color: isEnabled ? Colors.white : const Color(0xFFAFB2B7),
-                  fontWeight: FontWeight.bold,
-                ),
+              color: isEnabled ? Colors.white : const Color(0xFFAFB2B7),
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
       ),

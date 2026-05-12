@@ -20,8 +20,8 @@ class PracticeCardsState {
 
   Question? get currentQuestion =>
       questions.isNotEmpty && currentIndex < questions.length
-          ? questions[currentIndex]
-          : null;
+      ? questions[currentIndex]
+      : null;
 
   PracticeCardsState copyWith({
     List<Question>? questions,
@@ -71,20 +71,16 @@ class PracticeCardsNotifier extends Notifier<PracticeCardsState> {
   }
 
   void markAsKnown() {
-    final currentSet = Set<int>.from(state.knownIndices)..add(state.currentIndex);
-    state = state.copyWith(
-      knownIndices: currentSet,
-      isFlipped: false,
-    );
+    final currentSet = Set<int>.from(state.knownIndices)
+      ..add(state.currentIndex);
+    state = state.copyWith(knownIndices: currentSet, isFlipped: false);
     _nextCard();
   }
 
   void markAsUnknown() {
-    final currentSet = Set<int>.from(state.unknownIndices)..add(state.currentIndex);
-    state = state.copyWith(
-      unknownIndices: currentSet,
-      isFlipped: false,
-    );
+    final currentSet = Set<int>.from(state.unknownIndices)
+      ..add(state.currentIndex);
+    state = state.copyWith(unknownIndices: currentSet, isFlipped: false);
     _nextCard();
   }
 
@@ -109,5 +105,5 @@ class PracticeCardsNotifier extends Notifier<PracticeCardsState> {
 
 final practiceCardsNotifierProvider =
     NotifierProvider<PracticeCardsNotifier, PracticeCardsState>(
-  () => PracticeCardsNotifier(),
-);
+      () => PracticeCardsNotifier(),
+    );

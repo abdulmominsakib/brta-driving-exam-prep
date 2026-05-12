@@ -88,7 +88,8 @@ class MockExamQuizTutorialHelper {
             builder: (context, controller) {
               return _buildTutorialContent(
                 title: "চেক করুন",
-                description: "উত্তর সিলেক্ট করার পর এখানে ক্লিক করে যাচাই করুন।",
+                description:
+                    "উত্তর সিলেক্ট করার পর এখানে ক্লিক করে যাচাই করুন।",
                 theme: theme,
                 controller: controller,
                 isLast: true,

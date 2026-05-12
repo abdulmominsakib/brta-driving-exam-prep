@@ -3,7 +3,8 @@ import 'package:go_router/go_router.dart';
 import 'package:hugeicons/hugeicons.dart';
 import 'package:shadcn_ui/shadcn_ui.dart';
 
-class MockExamQuizAppBar extends StatelessWidget implements PreferredSizeWidget {
+class MockExamQuizAppBar extends StatelessWidget
+    implements PreferredSizeWidget {
   final double progress;
   final bool isPractice;
   final GlobalKey progressKey;

@@ -13,9 +13,9 @@ import '../providers/practice_cards_provider.dart';
 import '../providers/question_repository_provider.dart';
 import 'components/loading_road.dart';
 import 'components/practice_action_button.dart';
-import 'components/practice_card.dart';
 import 'components/practice_cards_completion_view.dart';
 import 'components/practice_cards_tutorial_helper.dart';
+import 'components/swipeable_card_stack.dart';
 
 class PracticeCardsPage extends ConsumerStatefulWidget {
   final String? dataPath;
@@ -158,81 +158,58 @@ class _PracticeCardsPageState extends ConsumerState<PracticeCardsPage> {
         ],
       ),
       body: Padding(
-        padding: const EdgeInsets.all(24.0),
+        padding: EdgeInsets.fromLTRB(
+          24,
+          state.isFlipped ? 24 : 14,
+          24,
+          state.isFlipped ? 16 : 14,
+        ),
         child: Column(
           children: [
             Expanded(
-              child: Stack(
-                alignment: Alignment.center,
-                children: [
-                  // Invisible tutorial target (static in stack to avoid duplication)
-                  SizedBox(key: _tutorialCenterKey, width: 100, height: 100),
-                  AnimatedSwitcher(
-                    duration: const Duration(milliseconds: 500),
-                    switchInCurve: Curves.easeOutQuart,
-                    switchOutCurve: Curves.easeInQuart,
-                    transitionBuilder:
-                        (Widget child, Animation<double> animation) {
-                      final slideIn = Tween<Offset>(
-                        begin: const Offset(1.0, 0.0),
-                        end: Offset.zero,
-                      ).animate(animation);
-
-                      final slideOut = Tween<Offset>(
-                        begin: const Offset(-1.0, 0.0),
-                        end: Offset.zero,
-                      ).animate(animation);
-
-                      if (child.key == ValueKey(state.currentIndex)) {
-                        return SlideTransition(
-                          position: slideIn,
-                          child: child,
-                        );
-                      } else {
-                        return SlideTransition(
-                          position: slideOut,
-                          child: child,
-                        );
-                      }
-                    },
-                    child: currentQuestion != null
-                        ? PracticeCard(
-                            key: ValueKey(
-                              state.currentIndex,
-                            ), // Key tied to index for switcher
-                            question: currentQuestion,
-                            isFlipped: state.isFlipped,
-                            onTap: () {
-                              if (isSoundEnabled) SoundService.playClick();
-                              if (isHapticEnabled) HapticFeedback.lightImpact();
-                              notifier.flipCard();
-                              if (!state.isFlipped) {
-                                // About to flip for the first time
-                                Future.delayed(
-                                  const Duration(milliseconds: 400),
-                                  () {
-                                    _checkAndShowButtonsTutorial();
-                                  },
-                                );
-                              }
-                            },
-                          )
-                        : const SizedBox.shrink(key: ValueKey('empty')),
-                  ),
-                ],
+              child: Center(
+                child: SwipeableCardStack(
+                  cardKey: _tutorialCenterKey,
+                  currentQuestion: currentQuestion!,
+                  isFlipped: state.isFlipped,
+                  nextQuestion1: state.currentIndex + 1 < state.questions.length
+                      ? state.questions[state.currentIndex + 1]
+                      : null,
+                  nextQuestion2: state.currentIndex + 2 < state.questions.length
+                      ? state.questions[state.currentIndex + 2]
+                      : null,
+                  onTap: () {
+                    if (isSoundEnabled) SoundService.playClick();
+                    if (isHapticEnabled) HapticFeedback.lightImpact();
+                    notifier.flipCard();
+                    if (!state.isFlipped) {
+                      Future.delayed(const Duration(milliseconds: 400), () {
+                        _checkAndShowButtonsTutorial();
+                      });
+                    }
+                  },
+                  onSwipeRight: () {
+                    if (isSoundEnabled) SoundService.playSuccess();
+                    if (isHapticEnabled) HapticFeedback.mediumImpact();
+                    notifier.markAsKnown();
+                  },
+                  onSwipeLeft: () {
+                    if (isSoundEnabled) SoundService.playLoading();
+                    if (isHapticEnabled) HapticFeedback.mediumImpact();
+                    notifier.markAsUnknown();
+                  },
+                ),
               ),
             ),
-            const SizedBox(height: 32),
-            // Always keep in tree for tutorial but hide if not flipped
-            AnimatedSlide(
-              offset: state.isFlipped ? Offset.zero : const Offset(0, 0.15),
-              duration: const Duration(milliseconds: 400),
-              curve: Curves.easeOutCubic,
-              child: AnimatedOpacity(
-                opacity: state.isFlipped ? 1.0 : 0.0,
-                duration: const Duration(milliseconds: 300),
-                child: IgnorePointer(
-                  ignoring: !state.isFlipped,
+            if (state.isFlipped) ...[
+              const SizedBox(height: 24),
+              AnimatedSlide(
+                offset: state.isFlipped ? Offset.zero : const Offset(0, 0.15),
+                duration: const Duration(milliseconds: 400),
+                curve: Curves.easeOutCubic,
+                child: AnimatedOpacity(
+                  opacity: state.isFlipped ? 1.0 : 0.0,
+                  duration: const Duration(milliseconds: 300),
                   child: Row(
                     children: [
                       Expanded(
@@ -270,9 +247,9 @@ class _PracticeCardsPageState extends ConsumerState<PracticeCardsPage> {
                   ),
                 ),
               ),
-            ),
-            if (!state.isFlipped) ...[
-              const SizedBox(height: 16),
+              const SizedBox(height: 8),
+            ] else ...[
+              const SizedBox(height: 32),
               Text(
                 'উওর দেখতে কার্ডে ট্যাপ করুন', // Tap card to see answer
                 style: theme.textTheme.p.copyWith(
@@ -282,7 +259,6 @@ class _PracticeCardsPageState extends ConsumerState<PracticeCardsPage> {
                 textAlign: TextAlign.center,
               ),
             ],
-            const SizedBox(height: 24),
           ],
         ),
       ),

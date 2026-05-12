@@ -44,7 +44,9 @@ class TrafficSignsFilterSection extends ConsumerWidget {
                   category: category,
                   isSelected: selectedCategory == category.id,
                   onTap: () {
-                    ref.read(selectedCategoryProvider.notifier).select(
+                    ref
+                        .read(selectedCategoryProvider.notifier)
+                        .select(
                           selectedCategory == category.id ? null : category.id,
                         );
                   },

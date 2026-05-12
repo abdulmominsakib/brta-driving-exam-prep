@@ -45,7 +45,8 @@ class TrafficSignsTutorialHelper {
             builder: (context, controller) {
               return _buildTutorialContent(
                 title: "বিস্তারিত তথ্য",
-                description: "যেকোনো সাইনের উপর ক্লিক করলে সেটির বিস্তারিত অর্থ এবং নিয়মাবলী জানতে পারবেন।",
+                description:
+                    "যেকোনো সাইনের উপর ক্লিক করলে সেটির বিস্তারিত অর্থ এবং নিয়মাবলী জানতে পারবেন।",
                 theme: theme,
                 controller: controller,
                 isLast: true,
