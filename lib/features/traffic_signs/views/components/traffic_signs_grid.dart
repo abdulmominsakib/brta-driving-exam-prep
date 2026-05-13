@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shadcn_ui/shadcn_ui.dart';
+import '../../../../core/utils/responsive.dart';
 import '../../data/models/traffic_sign.dart';
 import 'sign_card.dart';
 import 'sign_detail_bottom_sheet.dart';
@@ -27,7 +28,7 @@ class TrafficSignsGrid extends StatelessWidget {
       return _EmptySignsView(theme: theme);
     }
 
-    final crossAxisCount = MediaQuery.of(context).size.width > 600 ? 3 : 2;
+    final crossAxisCount = _gridColumns(context);
 
     return GridView.builder(
       padding: const EdgeInsets.all(16),
@@ -48,16 +49,27 @@ class TrafficSignsGrid extends StatelessWidget {
           category: category,
           onTap: () {
             if (category != null) {
-              showSignDetailBottomSheet(
-                context: context,
-                sign: sign,
-                category: category,
-              );
+              if (Responsive.isDesktop(context)) {
+                showSignDetailDialog(context: context, sign: sign, category: category);
+              } else {
+                showSignDetailBottomSheet(
+                  context: context,
+                  sign: sign,
+                  category: category,
+                );
+              }
             }
           },
         );
       },
     );
+  }
+
+  int _gridColumns(BuildContext context) {
+    if (Responsive.isDesktop(context)) return 6;
+    if (Responsive.isTablet(context)) return 4;
+    if (MediaQuery.of(context).size.width > 600) return 3;
+    return 2;
   }
 }
 

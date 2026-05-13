@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shadcn_ui/shadcn_ui.dart';
 
+import '../../../core/utils/responsive.dart';
 import '../../settings/views/components/app_version.dart';
 import 'components/app_purpose_section.dart';
 import 'components/developer_info_section.dart';
@@ -23,7 +24,10 @@ class WhyPage extends StatelessWidget {
         backgroundColor: ShadTheme.of(context).colorScheme.background,
         elevation: 0,
       ),
-      body: const SingleChildScrollView(
+      body: Center(
+        child: ConstrainedBox(
+          constraints: BoxConstraints(maxWidth: Responsive.maxContentWidth(context)),
+          child: const SingleChildScrollView(
         padding: EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -42,6 +46,8 @@ class WhyPage extends StatelessWidget {
             AppVersion(),
             SizedBox(height: 32),
           ],
+        ),
+      ),
         ),
       ),
     );

@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shadcn_ui/shadcn_ui.dart';
 
+import '../../../core/utils/responsive.dart';
 import '../models/guide.dart';
 
 import 'package:shared_preferences/shared_preferences.dart';
@@ -167,8 +168,8 @@ class _GuideListPageState extends State<GuideListPage> {
             SliverPadding(
               padding: const EdgeInsets.all(20),
               sliver: SliverGrid(
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 1,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: _gridColumns(context),
                   mainAxisSpacing: 16,
                   crossAxisSpacing: 16,
                   mainAxisExtent: 140,
@@ -188,6 +189,12 @@ class _GuideListPageState extends State<GuideListPage> {
         ),
       ),
     );
+  }
+
+  int _gridColumns(BuildContext context) {
+    if (Responsive.isDesktop(context)) return 3;
+    if (Responsive.isTablet(context)) return 2;
+    return 1;
   }
 
   Widget _buildGuideCard(BuildContext context, Guide guide, Key? key) {

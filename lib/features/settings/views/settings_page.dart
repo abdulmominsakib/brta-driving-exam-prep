@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shadcn_ui/shadcn_ui.dart';
+import '../../../core/utils/responsive.dart';
 import 'components/theme_selector.dart';
 import 'components/sound_toggles.dart';
 import 'components/share_section.dart';
@@ -30,26 +31,31 @@ class SettingsPage extends ConsumerWidget {
         elevation: 0,
         backgroundColor: Colors.transparent,
       ),
-      body: ListView(
-        padding: const EdgeInsets.all(16),
-        children: [
-          const WhyButton(),
-          const SizedBox(height: 24),
-          const ThemeSelector(),
-          const SizedBox(height: 16),
-          const SoundToggles(),
-          const SizedBox(height: 16),
-          const GithubSection(),
-          const SizedBox(height: 16),
-          const ShareSection(),
-          const SizedBox(height: 16),
-          if (!kIsWeb) ...[const RateAppSection(), const SizedBox(height: 16)],
-          const FeedbackSection(),
+      body: Center(
+        child: ConstrainedBox(
+          constraints: BoxConstraints(maxWidth: Responsive.maxContentWidth(context)),
+          child: ListView(
+            padding: const EdgeInsets.all(16),
+            children: [
+              const WhyButton(),
+              const SizedBox(height: 24),
+              const ThemeSelector(),
+              const SizedBox(height: 16),
+              const SoundToggles(),
+              const SizedBox(height: 16),
+              const GithubSection(),
+              const SizedBox(height: 16),
+              const ShareSection(),
+              const SizedBox(height: 16),
+              if (!kIsWeb) ...[const RateAppSection(), const SizedBox(height: 16)],
+              const FeedbackSection(),
 
-          const SizedBox(height: 40),
-          const AppVersion(),
-          const SizedBox(height: 24),
-        ],
+              const SizedBox(height: 40),
+              const AppVersion(),
+              const SizedBox(height: 24),
+            ],
+          ),
+        ),
       ),
     );
   }

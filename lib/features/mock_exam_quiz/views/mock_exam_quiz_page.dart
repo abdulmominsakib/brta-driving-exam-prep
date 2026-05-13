@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_confetti/flutter_confetti.dart';
@@ -252,7 +253,32 @@ class _MockExamQuizPageState extends ConsumerState<MockExamQuizPage> {
     final isSoundEnabled = settingsAsync.value?.isSoundEnabled ?? true;
     final isHapticEnabled = settingsAsync.value?.isHapticEnabled ?? true;
 
-    return Scaffold(
+    final shortcuts = <ShortcutActivator, VoidCallback>{
+      if (kIsWeb) ...{
+        const SingleActivator(LogicalKeyboardKey.digit1):
+            () => _selectOption(quizNotifier, 0, isSoundEnabled, isHapticEnabled),
+        const SingleActivator(LogicalKeyboardKey.digit2):
+            () => _selectOption(quizNotifier, 1, isSoundEnabled, isHapticEnabled),
+        const SingleActivator(LogicalKeyboardKey.digit3):
+            () => _selectOption(quizNotifier, 2, isSoundEnabled, isHapticEnabled),
+        const SingleActivator(LogicalKeyboardKey.digit4):
+            () => _selectOption(quizNotifier, 3, isSoundEnabled, isHapticEnabled),
+        const SingleActivator(LogicalKeyboardKey.enter):
+            () {
+          if (quizState.selectedOption != null && !quizState.isAnswered) {
+            quizNotifier.checkAnswer();
+          }
+        },
+        const SingleActivator(LogicalKeyboardKey.escape):
+            () => context.pop(),
+      },
+    };
+
+    return CallbackShortcuts(
+      bindings: shortcuts,
+      child: Focus(
+        autofocus: kIsWeb,
+        child: Scaffold(
       appBar: MockExamQuizAppBar(
         progress: progress,
         isPractice: widget.isPractice,
@@ -295,6 +321,19 @@ class _MockExamQuizPageState extends ConsumerState<MockExamQuizPage> {
           ),
         ),
       ),
+    ),
+      ),
     );
+  }
+
+  void _selectOption(
+    MockExamQuizNotifier notifier,
+    int index,
+    bool isSoundEnabled,
+    bool isHapticEnabled,
+  ) {
+    if (isSoundEnabled) SoundService.playClick();
+    if (isHapticEnabled) HapticFeedback.selectionClick();
+    notifier.selectOption(index);
   }
 }

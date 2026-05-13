@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:shadcn_ui/shadcn_ui.dart';
 import '../../../../core/models/quiz_model.dart';
@@ -40,6 +41,8 @@ class _SwipeableCardStackState extends State<SwipeableCardStack>
 
   static const double _threshold = 120.0;
   static const double _maxRotation = 0.25;
+
+  bool get _useGestures => !kIsWeb;
 
   @override
   void initState() {
@@ -161,9 +164,9 @@ class _SwipeableCardStackState extends State<SwipeableCardStack>
 
     return GestureDetector(
       key: widget.cardKey,
-      onHorizontalDragStart: _onDragStart,
-      onHorizontalDragUpdate: _onDragUpdate,
-      onHorizontalDragEnd: _onDragEnd,
+      onHorizontalDragStart: _useGestures ? _onDragStart : null,
+      onHorizontalDragUpdate: _useGestures ? _onDragUpdate : null,
+      onHorizontalDragEnd: _useGestures ? _onDragEnd : null,
       child: LayoutBuilder(
         builder: (context, constraints) {
           return Stack(

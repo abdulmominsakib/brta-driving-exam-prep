@@ -1,18 +1,71 @@
-import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:shadcn_ui/shadcn_ui.dart';
 import 'dart:math';
 import 'package:hugeicons/hugeicons.dart';
+import 'package:go_router/go_router.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../../core/utils/responsive.dart';
 import 'components/practice_path_painter.dart';
 import 'components/practice_node.dart';
 import '../models/practice_item.dart';
 
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../providers/practice_progress_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'components/practice_tutorial_helper.dart';
+
+final List<PracticeItem> practiceItems = [
+  PracticeItem(
+    title: 'বেসিকস',
+    dataPath: 'assets/data/questions/categorized/basics.json',
+    isEnabled: true,
+    passThreshold: 5,
+    icon: HugeIcons.strokeRoundedBook01,
+    color: Colors.blue,
+  ),
+  PracticeItem(
+    title: 'মেকানিজম',
+    dataPath: 'assets/data/questions/categorized/mechanisms.json',
+    isEnabled: true,
+    passThreshold: 5,
+    icon: HugeIcons.strokeRoundedSettings01,
+    color: Colors.blueGrey,
+  ),
+  PracticeItem(
+    title: 'রোড সাইন',
+    dataPath: 'assets/data/questions/categorized/road_signs.json',
+    isEnabled: true,
+    passThreshold: 5,
+    icon: HugeIcons.strokeRoundedAlert01,
+    color: Colors.orange,
+  ),
+  PracticeItem(
+    title: 'ট্রাফিক আইন',
+    dataPath: 'assets/data/questions/categorized/traffic_rules.json',
+    isEnabled: true,
+    passThreshold: 5,
+    icon: HugeIcons.strokeRoundedGrid,
+    color: Colors.purple,
+  ),
+  PracticeItem(
+    title: 'জরিমানা',
+    dataPath: 'assets/data/questions/categorized/penalties.json',
+    isEnabled: true,
+    passThreshold: 5,
+    icon: HugeIcons.strokeRoundedHelpCircle,
+    color: Colors.red,
+  ),
+  PracticeItem(
+    title: 'মডেল টেস্ট',
+    dataPath: 'mock_test',
+    isEnabled: true,
+    questionLimit: 20,
+    passThreshold: 13,
+    icon: HugeIcons.strokeRoundedTaskDaily01,
+    color: Colors.teal,
+  ),
+];
 
 class PracticePage extends ConsumerStatefulWidget {
   const PracticePage({super.key});
@@ -22,44 +75,14 @@ class PracticePage extends ConsumerStatefulWidget {
 }
 
 class _PracticePageState extends ConsumerState<PracticePage> {
-  static const String _webWarningDismissedKey =
-      'is_practice_web_warning_dismissed';
-
   final GlobalKey _firstNodeKey = GlobalKey();
   final GlobalKey _lastNodeKey = GlobalKey();
-  bool? _isWebWarningDismissed;
 
   @override
   void initState() {
     super.initState();
-    _loadWebWarningState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _checkAndShowTutorial();
-    });
-  }
-
-  Future<void> _loadWebWarningState() async {
-    if (!kIsWeb) {
-      _isWebWarningDismissed = true;
-      return;
-    }
-
-    final prefs = await SharedPreferences.getInstance();
-    final dismissed = prefs.getBool(_webWarningDismissedKey) ?? false;
-
-    if (!mounted) return;
-    setState(() {
-      _isWebWarningDismissed = dismissed;
-    });
-  }
-
-  Future<void> _dismissWebWarning() async {
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.setBool(_webWarningDismissedKey, true);
-
-    if (!mounted) return;
-    setState(() {
-      _isWebWarningDismissed = true;
     });
   }
 
@@ -82,14 +105,28 @@ class _PracticePageState extends ConsumerState<PracticePage> {
     }
   }
 
+  void _onPracticeTap(PracticeItem item, int levelIndex) {
+    if (item.dataPath == 'mock_test') {
+      context.go('/mock-exam');
+    } else {
+      context.push(
+        '/practice-quiz',
+        extra: {
+          'dataPath': item.dataPath,
+          'isPractice': true,
+          'questionLimit': item.questionLimit,
+          'passThreshold': item.passThreshold,
+          'levelIndex': levelIndex,
+        },
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final practiceState = ref.watch(practiceProgressProvider);
     final theme = ShadTheme.of(context);
 
-    // Determine the status bar brightness based on the theme
-    // If background is light (Brightness.light) -> Status bar icons should be dark (Brightness.dark)
-    // If background is dark (Brightness.dark) -> Status bar icons should be light (Brightness.light)
     final SystemUiOverlayStyle overlayStyle =
         theme.brightness == Brightness.light
         ? SystemUiOverlayStyle.dark.copyWith(statusBarColor: Colors.transparent)
@@ -102,227 +139,270 @@ class _PracticePageState extends ConsumerState<PracticePage> {
       child: Scaffold(
         body: ScrollConfiguration(
           behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
-          child: LayoutBuilder(
-            builder: (context, constraints) {
-              const int levelCount = 6;
-              const double nodeSize = 80;
-              const double verticalSpacing = 60;
-              const double itemHeight = nodeSize + verticalSpacing;
+          child: Responsive.isDesktop(context)
+              ? _buildDesktopLayout(context, theme, practiceState)
+              : _buildMobileLayout(context, theme, practiceState),
+        ),
+      ),
+    );
+  }
 
-              // Calculate total height needed. Add some bottom padding.
-              final totalHeight = levelCount * itemHeight + 100;
-
-              // Generate positions
-              final List<Offset> points = [];
-              final double centerX = constraints.maxWidth / 2;
-              final double amplitude = constraints.maxWidth * 0.25;
-
-              // Use same sinusoidal pattern as Home
-              for (int i = 0; i < levelCount; i++) {
-                final double y = i * itemHeight + 50;
-                final double x = centerX + sin(i * pi / 2) * amplitude;
-                points.add(Offset(x, y));
-              }
-
-              return SingleChildScrollView(
-                padding: EdgeInsets.only(
-                  top: max(0.0, MediaQuery.of(context).padding.top - 10),
+  Widget _buildDesktopLayout(
+    BuildContext context,
+    ShadThemeData theme,
+    PracticeState practiceState,
+  ) {
+    return SingleChildScrollView(
+      padding: const EdgeInsets.all(32),
+      child: Center(
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 900),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'প্র্যাকটিস',
+                style: theme.textTheme.h2.copyWith(fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(height: 8),
+              Text(
+                'প্রতিটি বিষয় ভালোভাবে অনুশীলন করুন',
+                style: theme.textTheme.p.copyWith(
+                  color: theme.colorScheme.mutedForeground,
                 ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
+              ),
+              const SizedBox(height: 32),
+              GridView.builder(
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 3,
+                  mainAxisSpacing: 20,
+                  crossAxisSpacing: 20,
+                  childAspectRatio: 1.1,
+                ),
+                itemCount: practiceItems.length,
+                itemBuilder: (context, index) {
+                  final item = practiceItems[index];
+                  final isCompleted = index < practiceState.unlockedIndex;
+                  final hasCompletedOnce =
+                      practiceState.completedSections.contains(item.dataPath);
+                  final isActive = index == practiceState.unlockedIndex;
+                  final isLocked = index > practiceState.unlockedIndex;
+
+                  return _DesktopPracticeCard(
+                    item: item,
+                    isCompleted: isCompleted,
+                    isActive: isActive,
+                    isLocked: isLocked,
+                    hasCompletedOnce: hasCompletedOnce,
+                    onTap: () => _onPracticeTap(item, index),
+                  );
+                },
+              ),
+              const SizedBox(height: 32),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildMobileLayout(
+    BuildContext context,
+    ShadThemeData theme,
+    PracticeState practiceState,
+  ) {
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        const int levelCount = 6;
+        const double nodeSize = 80;
+        const double verticalSpacing = 60;
+        const double itemHeight = nodeSize + verticalSpacing;
+        final totalHeight = levelCount * itemHeight + 100;
+
+        final List<Offset> points = [];
+        final double centerX = constraints.maxWidth / 2;
+        final double amplitude = constraints.maxWidth * 0.25;
+
+        for (int i = 0; i < levelCount; i++) {
+          final double y = i * itemHeight + 50;
+          final double x = centerX + sin(i * pi / 2) * amplitude;
+          points.add(Offset(x, y));
+        }
+
+        return SingleChildScrollView(
+          padding: EdgeInsets.only(
+            top: max(0.0, MediaQuery.of(context).padding.top - 10),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              SizedBox(
+                height: totalHeight,
+                child: Stack(
                   children: [
-                    if (kIsWeb && _isWebWarningDismissed == false)
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(16, 8, 16, 12),
-                        child: Container(
-                          padding: const EdgeInsets.fromLTRB(14, 12, 10, 12),
-                          decoration: BoxDecoration(
-                            gradient: const LinearGradient(
-                              colors: [Color(0xFF86EFAC), Color(0xFF4ADE80)],
-                              begin: Alignment.topLeft,
-                              end: Alignment.bottomRight,
-                            ),
-                            borderRadius: BorderRadius.circular(16),
-                            border: Border.all(
-                              color: const Color(0xFF22C55E),
-                              width: 2,
-                            ),
-                            boxShadow: const [
-                              BoxShadow(
-                                color: Color(0x3322C55E),
-                                blurRadius: 10,
-                                offset: Offset(0, 4),
-                              ),
-                            ],
-                          ),
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                width: 32,
-                                height: 32,
-                                decoration: const BoxDecoration(
-                                  color: Colors.white,
-                                  shape: BoxShape.circle,
-                                ),
-                                child: const Icon(
-                                  Icons.bolt_rounded,
-                                  size: 20,
-                                  color: Color(0xFF16A34A),
-                                ),
-                              ),
-                              const SizedBox(width: 10),
-                              const Expanded(
-                                child: Text(
-                                  'For the smoothest experience, use the Android or iOS app. Web performance can feel a little slower on some devices.',
-                                  style: TextStyle(
-                                    fontSize: 13,
-                                    height: 1.3,
-                                    fontWeight: FontWeight.w700,
-                                    color: Color(0xFF14532D),
-                                  ),
-                                ),
-                              ),
-                              const SizedBox(width: 8),
-                              InkWell(
-                                onTap: _dismissWebWarning,
-                                borderRadius: BorderRadius.circular(20),
-                                child: Container(
-                                  padding: const EdgeInsets.all(4),
-                                  decoration: BoxDecoration(
-                                    color: const Color(0x33000000),
-                                    borderRadius: BorderRadius.circular(20),
-                                  ),
-                                  child: const Icon(
-                                    Icons.close_rounded,
-                                    size: 18,
-                                    color: Color(0xFF14532D),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    SizedBox(
-                      height: totalHeight,
-                      child: Stack(
-                        children: [
-                          // Path Layer
-                          CustomPaint(
-                            size: Size(constraints.maxWidth, totalHeight),
-                            painter: PathPainter(
-                              points: points,
-                              color: theme.brightness == Brightness.dark
-                                  ? const Color(0xFF374151) // Dark mode road
-                                  : const Color(0xFFE5E7EB), // Light mode road
-                            ),
-                          ),
-                          // Nodes Layer
-                          ...List.generate(levelCount, (index) {
-                            final point = points[index];
-
-                            // Define Practice Nodes
-                            // UNLOCK ALL: All items are enabled by default.
-                            final practiceItems = [
-                              PracticeItem(
-                                title: 'বেসিকস',
-                                dataPath:
-                                    'assets/data/questions/categorized/basics.json',
-                                isEnabled: true,
-                                passThreshold: 5,
-                                icon: HugeIcons.strokeRoundedBook01,
-                                color: Colors.blue,
-                              ),
-                              PracticeItem(
-                                title: 'মেকানিজম',
-                                dataPath:
-                                    'assets/data/questions/categorized/mechanisms.json',
-                                isEnabled: true,
-                                passThreshold: 5,
-                                icon: HugeIcons.strokeRoundedSettings01,
-                                color: Colors.blueGrey,
-                              ),
-                              PracticeItem(
-                                title: 'রোড সাইন',
-                                dataPath:
-                                    'assets/data/questions/categorized/road_signs.json',
-                                isEnabled: true,
-                                passThreshold: 5,
-                                icon: HugeIcons.strokeRoundedAlert01,
-                                color: Colors.orange,
-                              ),
-                              PracticeItem(
-                                title: 'ট্রাফিক আইন',
-                                dataPath:
-                                    'assets/data/questions/categorized/traffic_rules.json',
-                                isEnabled: true,
-                                passThreshold: 5,
-                                icon: HugeIcons.strokeRoundedGrid,
-                                color: Colors.purple,
-                              ),
-                              PracticeItem(
-                                title: 'জরিমানা',
-                                dataPath:
-                                    'assets/data/questions/categorized/penalties.json',
-                                isEnabled: true,
-                                passThreshold: 5,
-                                icon: HugeIcons.strokeRoundedHelpCircle,
-                                color: Colors.red,
-                              ),
-                              PracticeItem(
-                                title: 'মডেল টেস্ট',
-                                dataPath: 'mock_test',
-                                isEnabled: true,
-                                questionLimit: 20,
-                                passThreshold: 13,
-                                icon: HugeIcons.strokeRoundedTaskDaily01,
-                                color: Colors.teal,
-                              ),
-                            ];
-
-                            final item = practiceItems[index];
-
-                            // Check completion status from provider
-                            // unlockedIndex is now in practiceState.unlockedIndex
-                            bool isCompleted =
-                                index < practiceState.unlockedIndex;
-                            bool hasCompletedOnce = practiceState
-                                .completedSections
-                                .contains(item.dataPath);
-
-                            bool isActive =
-                                index == practiceState.unlockedIndex;
-                            bool isLocked = index > practiceState.unlockedIndex;
-
-                            return Positioned(
-                              left: point.dx - 50, // (nodeSize + 20) / 2
-                              top:
-                                  point.dy -
-                                  6, // Adjusted for the 6px top padding in PracticeNode
-                              child: PracticeNode(
-                                key: index == 0
-                                    ? _firstNodeKey
-                                    : index == levelCount - 1
-                                    ? _lastNodeKey
-                                    : null,
-                                item: item,
-                                levelIndex: index,
-                                isCompleted: isCompleted,
-                                isActive: isActive,
-                                isLocked: isLocked,
-                                hasCompletedOnce: hasCompletedOnce,
-                              ),
-                            );
-                          }),
-                        ],
+                    CustomPaint(
+                      size: Size(constraints.maxWidth, totalHeight),
+                      painter: PathPainter(
+                        points: points,
+                        color: theme.brightness == Brightness.dark
+                            ? const Color(0xFF374151)
+                            : const Color(0xFFE5E7EB),
                       ),
                     ),
+                    ...List.generate(levelCount, (index) {
+                      final point = points[index];
+                      final item = practiceItems[index];
+                      final isCompleted = index < practiceState.unlockedIndex;
+                      final hasCompletedOnce =
+                          practiceState.completedSections
+                              .contains(item.dataPath);
+                      final isActive = index == practiceState.unlockedIndex;
+                      final isLocked = index > practiceState.unlockedIndex;
+
+                      return Positioned(
+                        left: point.dx - 50,
+                        top: point.dy - 6,
+                        child: PracticeNode(
+                          key: index == 0
+                              ? _firstNodeKey
+                              : index == levelCount - 1
+                              ? _lastNodeKey
+                              : null,
+                          item: item,
+                          levelIndex: index,
+                          isCompleted: isCompleted,
+                          isActive: isActive,
+                          isLocked: isLocked,
+                          hasCompletedOnce: hasCompletedOnce,
+                        ),
+                      );
+                    }),
                   ],
                 ),
-              );
-            },
+              ),
+            ],
           ),
+        );
+      },
+    );
+  }
+}
+
+class _DesktopPracticeCard extends StatelessWidget {
+  final PracticeItem item;
+  final bool isCompleted;
+  final bool isActive;
+  final bool isLocked;
+  final bool hasCompletedOnce;
+  final VoidCallback onTap;
+
+  const _DesktopPracticeCard({
+    required this.item,
+    required this.isCompleted,
+    required this.isActive,
+    required this.isLocked,
+    required this.hasCompletedOnce,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = ShadTheme.of(context);
+    final baseColor = item.color ?? const Color(0xFF58CC02);
+
+    final color = isLocked
+        ? const Color(0xFFE5E7EB)
+        : isCompleted
+        ? const Color(0xFFFFC800)
+        : baseColor;
+
+    final bgColor =
+        isLocked
+            ? theme.colorScheme.background
+            : color.withValues(alpha: 0.08);
+
+    return GestureDetector(
+      onTap: isLocked ? null : onTap,
+      child: Container(
+        decoration: BoxDecoration(
+          color: bgColor,
+          borderRadius: BorderRadius.circular(20),
+          border: Border.all(
+            color: isLocked
+                ? theme.colorScheme.border
+                : color.withValues(alpha: 0.3),
+            width: 2,
+          ),
+        ),
+        child: Stack(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(24),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  HugeIcon(
+                    icon: isLocked
+                        ? HugeIcons.strokeRoundedLock
+                        : item.icon ?? HugeIcons.strokeRoundedPlay,
+                    color: isLocked
+                        ? const Color(0xFFAFB2B7)
+                        : isCompleted
+                        ? const Color(0xFFFFC800)
+                        : isActive
+                        ? baseColor
+                        : baseColor,
+                    size: 40,
+                  ),
+                  const SizedBox(height: 16),
+                  Text(
+                    item.title,
+                    style: theme.textTheme.large.copyWith(
+                      fontWeight: FontWeight.bold,
+                      color: isLocked
+                          ? const Color(0xFFAFB2B7)
+                          : theme.colorScheme.foreground,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    isLocked
+                        ? 'লকড'
+                        : isCompleted
+                        ? 'সম্পন্ন'
+                        : isActive
+                        ? 'শুরু করুন'
+                        : 'অনুশীলন',
+                    style: theme.textTheme.small.copyWith(
+                      color: color,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            if (hasCompletedOnce && !isLocked)
+              Positioned(
+                top: 12,
+                right: 12,
+                child: Container(
+                  padding: const EdgeInsets.all(4),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFF58CC02),
+                    shape: BoxShape.circle,
+                    border: Border.all(color: Colors.white, width: 2),
+                  ),
+                  child: const HugeIcon(
+                    icon: HugeIcons.strokeRoundedTick02,
+                    color: Colors.white,
+                    size: 14,
+                  ),
+                ),
+              ),
+          ],
         ),
       ),
     );

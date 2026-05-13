@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -18,7 +19,7 @@ import '../../features/why/views/why_page.dart';
 final GlobalKey<NavigatorState> _rootNavigatorKey = GlobalKey<NavigatorState>();
 
 Future<String?> _onboardingRedirect(_, GoRouterState state) async {
-  // Only redirect from '/' on first launch
+  if (kIsWeb) return null;
   if (state.matchedLocation != '/') return null;
   final prefs = await SharedPreferences.getInstance();
   final completed = prefs.getBool('onboarding_complete') ?? false;
