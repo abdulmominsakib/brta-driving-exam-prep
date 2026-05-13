@@ -1,6 +1,7 @@
-import 'package:in_app_review/in_app_review.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import 'rate_app_review.dart';
 
 part 'rate_app_provider.g.dart';
 
@@ -14,9 +15,9 @@ class RateApp extends _$RateApp {
 
   /// Manually open the store listing for the user to write a review
   Future<void> openStoreListing() async {
-    final InAppReview inAppReview = InAppReview.instance;
-    if (await inAppReview.isAvailable()) {
-      await inAppReview.openStoreListing();
+    final review = RateAppReview();
+    if (await review.isAvailable()) {
+      await review.openStoreListing();
     }
   }
 
@@ -38,10 +39,10 @@ class RateApp extends _$RateApp {
       }
     }
 
-    final InAppReview inAppReview = InAppReview.instance;
+    final review = RateAppReview();
 
-    if (await inAppReview.isAvailable()) {
-      await inAppReview.requestReview();
+    if (await review.isAvailable()) {
+      await review.requestReview();
       // Update the last prompt date
       await prefs.setString(_lastPromptKey, DateTime.now().toIso8601String());
       // Ideally we don't mark as rated just for prompting,

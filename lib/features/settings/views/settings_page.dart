@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -42,8 +43,7 @@ class SettingsPage extends ConsumerWidget {
           const SizedBox(height: 16),
           const ShareSection(),
           const SizedBox(height: 16),
-          const RateAppSection(),
-          const SizedBox(height: 16),
+          if (!kIsWeb) ...[const RateAppSection(), const SizedBox(height: 16)],
           const FeedbackSection(),
 
           const SizedBox(height: 40),
