@@ -10,6 +10,7 @@ import '../../features/license_guide/views/license_guide_page.dart';
 import '../../features/mock_exam/views/mock_exam_page.dart';
 import '../../features/mock_exam_quiz/views/mock_exam_quiz_page.dart';
 import '../../features/onboarding/views/onboarding_page.dart';
+import '../../features/penalties/views/penalties_page.dart';
 import '../../features/practice/views/practice_page.dart';
 import '../../features/practice_quiz/views/practice_cards_page.dart';
 import '../../features/settings/views/settings_page.dart';
@@ -146,6 +147,13 @@ final appRouter = GoRouter(
       parentNavigatorKey: _rootNavigatorKey,
       pageBuilder: (context, state) {
         return CupertinoPage(key: state.pageKey, child: const WhyPage());
+      },
+    ),
+    GoRoute(
+      path: '/penalties',
+      parentNavigatorKey: _rootNavigatorKey,
+      pageBuilder: (context, state) {
+        return CupertinoPage(key: state.pageKey, child: const PenaltiesPage());
       },
     ),
     GoRoute(

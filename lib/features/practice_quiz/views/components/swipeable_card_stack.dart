@@ -163,7 +163,6 @@ class _SwipeableCardStackState extends State<SwipeableCardStack>
     final theme = ShadTheme.of(context);
 
     return GestureDetector(
-      key: widget.cardKey,
       onHorizontalDragStart: _useGestures ? _onDragStart : null,
       onHorizontalDragUpdate: _useGestures ? _onDragUpdate : null,
       onHorizontalDragEnd: _useGestures ? _onDragEnd : null,
@@ -213,6 +212,16 @@ class _SwipeableCardStackState extends State<SwipeableCardStack>
                         isFlipped: widget.isFlipped,
                         onTap: widget.onTap,
                       ),
+                      if (widget.cardKey != null)
+                        Center(
+                          child: IgnorePointer(
+                            child: SizedBox(
+                              key: widget.cardKey,
+                              width: 72,
+                              height: 72,
+                            ),
+                          ),
+                        ),
                       if (_progress > 0)
                         Positioned.fill(
                           child: IgnorePointer(

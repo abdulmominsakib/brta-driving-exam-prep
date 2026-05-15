@@ -55,6 +55,14 @@ class _GuideListPageState extends State<GuideListPage> {
 
     final List<Guide> guides = [
       Guide(
+        id: 'penalties_guide',
+        title: 'জরিমানা ও আইন',
+        description:
+            'সড়ক পরিবহন আইন ২০১৮, নিয়ম, পয়েন্ট কর্তন ও জরিমানার তালিকা',
+        imagePath: 'assets/images/guides/penalties.webp',
+        route: '/penalties',
+      ),
+      Guide(
         id: 'license_guide',
         title: 'লাইসেন্স গাইড',
         description: 'ড্রাইভিং লাইসেন্স পাওয়ার সম্পূর্ণ প্রক্রিয়া',

@@ -11,7 +11,7 @@ class PracticeCardsTutorialHelper {
       identify: "card",
       keyTarget: cardKey,
       shape: ShapeLightFocus.Circle,
-      paddingFocus: 5,
+      paddingFocus: 2,
 
       contents: [
         TargetContent(
@@ -148,7 +148,7 @@ class PracticeCardsTutorialHelper {
         return true;
       },
       textSkip: "বাদ দিন",
-      paddingFocus: 10,
+      paddingFocus: 2,
     ).show(context: context);
   }
 

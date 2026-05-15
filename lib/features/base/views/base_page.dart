@@ -110,7 +110,10 @@ List<NavigationDestination> _navDestinations(BuildContext context) {
       label: 'চিহ্ন',
     ),
     NavigationDestination(
-      icon: HugeIcon(icon: HugeIcons.strokeRoundedDashboardCircle, color: muted),
+      icon: HugeIcon(
+        icon: HugeIcons.strokeRoundedDashboardCircle,
+        color: muted,
+      ),
       selectedIcon: const HugeIcon(
         icon: HugeIcons.strokeRoundedDashboardCircle,
         color: Color(0xFF58CC02),
@@ -251,10 +254,9 @@ class _NavItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = ShadTheme.of(context);
-    final color =
-        isSelected
-            ? const Color(0xFF58CC02)
-            : theme.colorScheme.mutedForeground;
+    final color = isSelected
+        ? const Color(0xFF58CC02)
+        : theme.colorScheme.mutedForeground;
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 2),
@@ -266,10 +268,9 @@ class _NavItem extends StatelessWidget {
           child: Container(
             height: 44,
             decoration: BoxDecoration(
-              color:
-                  isSelected
-                      ? const Color(0xFF58CC02).withValues(alpha: 0.1)
-                      : Colors.transparent,
+              color: isSelected
+                  ? const Color(0xFF58CC02).withValues(alpha: 0.1)
+                  : Colors.transparent,
               borderRadius: BorderRadius.circular(10),
             ),
             child: Row(
